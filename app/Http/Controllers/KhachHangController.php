@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\KhachHang;
 use App\DonHang;
+use App\SanPham;
+use App\Tin;
 use DB;
 
 class KhachHangController extends Controller
@@ -140,5 +142,14 @@ class KhachHangController extends Controller
       $khachhang->save();
 
       return redirect('admin/khachhang/sua/' . $idKhachHang)->with('thongbao','Cập nhật thành công');
+    }
+
+    public function getSearch(Request $request){
+
+      $khachhang = KhachHang::where('HoTen', 'like', '%'.$request->key.'%')->get();
+      $sanpham = SanPham::where('TenSP', 'like', '%'.$request->key.'%')->get();
+      $tintuc  = Tin::where('TieuDe', 'like', '%'.$request->key.'%')->get();
+
+      return view('adminDashboard.khachhang.timkiem',compact('khachhang', 'sanpham', 'tintuc'));
     }
 }

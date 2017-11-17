@@ -121,5 +121,10 @@ Route::group(['prefix'=>'admin'],function(){
 
         Route::get('xoa/{id}', 'TinController@getXoa');
     });
+
+    Route::get('search', [
+        'as'   => 'searchDashboard',
+        'uses' => 'KhachHangController@getSearch'
+    ]);
 });
 
