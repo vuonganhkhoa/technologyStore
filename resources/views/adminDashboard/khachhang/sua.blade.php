@@ -99,22 +99,28 @@
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Địa chỉ Email</label>
-                                                    <input type="email" class="form-control" name="emailKhachHang" value="{{ $khachhang->Email }}">
+                                                    <input type="email" class="form-control" name="emailKhachHang" value="{{ $khachhang->Email }}" readonly>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-6">
+
+                                            <div class="col-md-4">
+                                                <br>
+                                                <label class="checkbox-inline"><input type="checkbox" name="changePassword" id="changePassword"> Đổi mật khẩu</label>
+                                            </div>
+                                            <div class="col-md-4">
                                                 <div class="form-group label-floating">
+                                                   
                                                     <label class="control-label">Mật khẩu</label>
-                                                    <input type="password" class="form-control"  name="matkhauKhachHang" value="{{ $khachhang->MatKhau }}"  disabled>
+                                                    <input type="password" class="form-control password"  name="matkhauKhachHang" value="{{ $khachhang->MatKhau }}"  disabled>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Nhập lại mật khẩu</label>
-                                                    <input type="password" class="form-control"  name="matkhaunhaplaiKhachHang" value="{{ $khachhang->MatKhau }}" disabled>
+                                                    <input type="password" class="form-control password"  name="matkhaunhaplaiKhachHang" value="{{ $khachhang->MatKhau }}" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -174,5 +180,7 @@
 
                 </div>
             </div>
+
+
 
 @endsection

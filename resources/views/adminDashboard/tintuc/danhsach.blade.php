@@ -101,8 +101,8 @@
                                                 <td>{{$t->TieuDe}}</td>
                                                 <td>{{$t->TomTat}}</td>
                                                 <td>{{$t->SoLanXem}}</td>
-                                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href=""> Delete</a></td>
-                                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href=""> Edit</a></td>
+                                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/tintuc/xoa/{{$t->idTin}}" onclick="return xac_nhan_xoa('Bạn có chắc muốn xóa?')"> Delete</a></td>
+                                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/tintuc/sua/{{$t->idTin}}"> Edit</a></td>
                                             </tr>
                                             @endforeach
                                         </tbody>

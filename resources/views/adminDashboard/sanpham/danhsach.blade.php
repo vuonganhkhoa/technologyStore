@@ -61,15 +61,20 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
+                            @if(session('thongbao'))
+                                  <div class="alert alert-success">
+                                    {{session('thongbao')}}
+                                  </div>
+                                @endif
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
-
+                        
                                     <div class="row">
                                         <div class="col-md-11">
                                             <h4 class="title">Danh sách các sản phẩm</h4>
                                         </div>
                                         <div class="col-md-1">
-                                            <button type="button" class="btn-primary-outline btn-circle btn-lg"> + </button>
+                                            <a href="admin/sanpham/them"><button type="button" class="btn-primary-outline btn-circle btn-lg"> + </button></a>
                                         </div>
                                     </div>    
                                     
@@ -97,8 +102,8 @@
                                                 <td>{{$sp->GiaKhuyenMai}}</td>
                                                 <td>{{$sp->TonKho}}</td>
                                                 <td>{{$sp->SanPhamMoi}}</td>
-                                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href=""> Delete</a></td>
-                                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href=""> Edit</a></td>
+                                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/sanpham/xoa/{{$sp->idSP}}" onclick="return xac_nhan_xoa('Bạn có chắc muốn xóa sản phẩm này?')"> Delete</a></td>
+                                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/sanpham/sua/{{$sp->idSP}}"> Edit</a></td>
                                             </tr>
                                             @endforeach
                                         </tbody>

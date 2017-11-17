@@ -8,6 +8,7 @@ class SanPham extends Model
 {
     
     protected $table   = 'SanPham';
+    protected $primaryKey = 'idSP';
     public $timestamps = false;
 
     public function LoaiSanPham(){
