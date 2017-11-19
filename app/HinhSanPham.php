@@ -8,6 +8,7 @@ class HinhSanPham extends Model
 {
     
     protected $table   = 'HinhSanPham';
+     protected $primaryKey = 'idHinh';
     public $timestamps = false;
 
     public function SanPham(){

@@ -52,6 +52,24 @@
                             <p>Tin tức</p>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('donhang') }}">
+                            <i class="fa fa-cart-plus"></i>
+                            <p>Đơn hàng</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('chitietdonhang') }}">
+                            <i class="fa fa-file-text"></i>
+                            <p>Chi tiết đơn hàng</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('hinhsanpham') }}">
+                            <i class="fa fa-picture-o"></i>
+                            <p>Hình sản phẩm</p>
+                        </a>
+                    </li>
                 </ul>
 
     </div>

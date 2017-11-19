@@ -1,7 +1,7 @@
 @extends('adminDashboard.layout.master')
 
 @section('tittle')
-    Cập nhật loại tin
+    Hình sản phẩm
 @endsection
 
 @section('sidebar')
@@ -14,7 +14,7 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li>
+                    <li >
                         <a href="{{ route('hangsanxuat') }}">
                             <i class="fa fa-building-o"></i>
                             <p>Hãng sản xuất</p>
@@ -32,7 +32,7 @@
                             <p>Loại sản phẩm</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="{{ route('loaitin') }}">
                             <i class="fa fa-list"></i>
                             <p>Loại tin tức</p>
@@ -62,7 +62,7 @@
                             <p>Chi tiết đơn hàng</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="{{ route('hinhsanpham') }}">
                             <i class="fa fa-picture-o"></i>
                             <p>Hình sản phẩm</p>
@@ -75,7 +75,7 @@
 
 @section('content')
 
-   <div class="content">
+      <div class="content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8">
@@ -94,25 +94,49 @@
                             </div>
                             @endif
 
+                            @if (session('loi'))
+                            <div class="alert alert-danger">
+                                {{session('loi')}} 
+                            </div>
+                            @endif
+
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
-                                    <h4 class="title">Cập nhật loại tin</h4>
+                                    <h4 class="title">Thêm hình sản phẩm</h4>
                                 </div>
                                 <div class="card-content">
-                                    <form method="POST" action="admin/loaitin/sua/{{$loaitin->idLoaiTin}}">
+
+                                    <form method="POST" action="admin/hinhsanpham/them" enctype="multipart/form-data">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Tên loại tin</label>
-                                                    <input type="text" class="form-control" name="tenLoaiTin" value="{{$loaitin->TieuDeLoaiTin}}">
+                                                <div class="form-group">
+                                                    <label class="control-label">Chọn sản phẩm</label>
+                                                    <select class="form-control" name="SanPham" id="LoaiTin">
+                                                      @foreach($sanpham as $sp)
+                                                        <option value="{{$sp->idSP}}">{{$sp->TenSP}}</option>
+                                                      @endforeach
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                     
-                                        <button type="submit" class="btn btn-primary pull-right">Cập nhật</button>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group label-floating">
+                                                  <label class="control-label">Hình ảnh</label>
+                                                  <input type="file" name="hinh" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                       
+                                        
+                                        <button type="submit" class="btn btn-primary pull-right">Thêm</button>
                                         <div class="clearfix"></div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>
@@ -121,6 +145,5 @@
 
                 </div>
             </div>
-
 
 @endsection

@@ -122,9 +122,66 @@ Route::group(['prefix'=>'admin'],function(){
         Route::get('xoa/{id}', 'TinController@getXoa');
     });
 
+    Route::group(['prefix'=>'donhang'], function(){
+
+        Route::get('danhsach','DonHangController@getDanhSach')->name('donhang');
+        Route::get('sua/{id}','DonHangController@getSua'); //gọi trang
+        Route::post('sua/{id}', 'DonHangController@postSua'); //post data 
+
+
+        Route::get('them','DonHangController@getThem');
+        Route::post('them', 'DonHangController@postThem');
+
+        Route::get('xoa/{id}', 'DonHangController@getXoa');
+    });
+
+    Route::group(['prefix'=>'chitietdonhang'], function(){
+
+        Route::get('danhsach','ChiTietDonHangController@getDanhSach')->name('chitietdonhang');
+        Route::get('sua/{id}','ChiTietDonHangController@getSua'); //gọi trang
+        Route::post('sua/{id}', 'ChiTietDonHangController@postSua'); //post data 
+
+
+        Route::get('them','ChiTietDonHangController@getThem');
+        Route::post('them', 'ChiTietDonHangController@postThem');
+
+        Route::get('xoa/{id}', 'ChiTietDonHangController@getXoa');
+    });
+
+    Route::group(['prefix'=>'hinhsanpham'], function(){
+
+        Route::get('danhsach','HinhSanPhamController@getDanhSach')->name('hinhsanpham');
+        Route::get('sua/{id}','HinhSanPhamController@getSua'); //gọi trang
+        Route::post('sua/{id}', 'HinhSanPhamController@postSua'); //post data 
+
+
+        Route::get('them','HinhSanPhamController@getThem');
+        Route::post('them', 'HinhSanPhamController@postThem');
+
+        Route::get('xoa/{id}', 'HinhSanPhamController@getXoa');
+    });
+
     Route::get('search', [
         'as'   => 'searchDashboard',
         'uses' => 'KhachHangController@getSearch'
     ]);
+
+    Route::group(['prefix'=>'ajax'], function(){
+
+        Route::get('giasanpham/{idSP}', [
+            'as'   => 'ajax',
+            'uses' => 'AjaxController@getGiaSanPham'
+        ]);
+        Route::get('giaKMsanpham/{idSP}', [
+            'as'   => 'ajax',
+            'uses' => 'AjaxController@getGiaKMSanPham'
+        ]);
+        Route::get('thanhtiensanpham/{idSP}/{SoLuong}', [
+            'as'   => 'ajax',
+            'uses' => 'AjaxController@getThanhTien'
+        ]);
+
+    });
+   
 });
 

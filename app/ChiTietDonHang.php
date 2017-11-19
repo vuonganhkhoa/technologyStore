@@ -8,6 +8,7 @@ class ChiTietDonHang extends Model
 {
     
     protected $table   = 'ChiTietDonHang';
+    protected $primaryKey = 'idChiTietDonHang';
     public $timestamps = false;
 
     public function DonHang(){

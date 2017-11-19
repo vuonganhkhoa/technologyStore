@@ -1,7 +1,7 @@
 @extends('adminDashboard.layout.master')
 
 @section('tittle')
-    Thêm Sản Phẩm
+    Đơn hàng
 @endsection
 
 @section('sidebar')
@@ -14,7 +14,7 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li>
+                    <li >
                         <a href="{{ route('hangsanxuat') }}">
                             <i class="fa fa-building-o"></i>
                             <p>Hãng sản xuất</p>
@@ -38,19 +38,19 @@
                             <p>Loại tin tức</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="{{ route('sanpham') }}">
                             <i class="fa fa-archive"></i>
                             <p>Sản phẩm</p>
                         </a>
                     </li>
-                     <li>
+                    <li>
                         <a href="{{ route('tintuc') }}">
                             <i class="fa fa-newspaper-o"></i>
                             <p>Tin tức</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="{{ route('donhang') }}">
                             <i class="fa fa-cart-plus"></i>
                             <p>Đơn hàng</p>
@@ -75,7 +75,7 @@
 
 @section('content')
 
-        <div class="content">
+    <div class="content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8">
@@ -102,33 +102,20 @@
 
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
-                                    <h4 class="title">Thêm sản phẩm</h4>
+                                    <h4 class="title">Thêm đơn hàng</h4>
                                 </div>
                                 <div class="card-content">
 
-                                    <form method="POST" action="admin/sanpham/them" enctype="multipart/form-data">
+                                    <form method="POST" action="admin/donhang/them" enctype="multipart/form-data">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="control-label">Chọn loại sản phẩm</label>
-                                                    <select class="form-control" name="LoaiSanPham" id="LoaiSanPham">
-                                                      @foreach($loaisp as $loai)
-                                                        <option value="{{$loai->idLoaiSP}}">{{$loai->TenLoaiSP}}</option>
-                                                      @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="control-label">Chọn hãng sản xuất</label>
-                                                    <select class="form-control" name="HangSX" id="HangSX">
-                                                      @foreach($hangSX as $hang)
-                                                        <option value="{{$hang->idHangSX}}">{{$hang->TenHangSX}}</option>
+                                                    <label class="control-label">Chọn khách hàng</label>
+                                                    <select class="form-control" name="KhachHang" id="LoaiTin">
+                                                      @foreach($khachhang as $k)
+                                                        <option value="{{$k->idKhachHang}}">{{$k->HoTen}}</option>
                                                       @endforeach
                                                     </select>
                                                 </div>
@@ -138,50 +125,8 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Tên sản phẩm</label>
-                                                    <input type="text" class="form-control" name="tenSP">
-                                                </div>
-                                            </div>   
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Giá sản phẩm</label>
-                                                    <input type="text" class="form-control" name="giaSP">
-                                                </div>
-                                            </div>   
-                                            <div class="col-md-6">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Giá khuyến mãi</label>
-                                                    <input type="text" class="form-control" name="khuyenmaiSP" value="0">
-                                                </div>
-                                            </div>   
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Mô tả</label>
-                                                    <textarea id="demo" class="form-control ckeditor" rows="8" name="mota"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Chi tiết</label>
-                                                    <textarea id="demo" class="form-control ckeditor" rows="8" name="chitiet"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group label-floating">
-                                                  <label class="control-label">Hình ảnh</label>
-                                                  <input type="file" name="hinh" class="form-control" />
+                                                    <label class="control-label">Ngày đặt hàng</label>
+                                                    <input type="date" class="form-control" name="NgayDatHang" value="<?= date('Y-m-d') ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -189,44 +134,60 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Ngày đăng</label>
-                                                    <input type="date" class="form-control date" placeholder="Ngày đăng"  name="ngaydang" value="<?= date('Y-m-d') ?>">
+                                                    <label class="control-label">Tên người nhận</label>
+                                                    <input type="text" class="form-control" name="TenNguoiNhan">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Tồn kho</label>
-                                                    <input type="number" value="0" class="form-control"  name="tonkho">
+                                                    <label class="control-label">Email</label>
+                                                    <input type="email" class="form-control" name="email">
                                                 </div>
                                             </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Số điện thoại</label>
+                                                    <input type="text" class="form-control" name="sdt">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Ngày giao</label>
+                                                    <input type="date" class="form-control" name="NgayGiaoHang" value="<?= date('Y-m-d') ?>">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Địa điểm giao</label>
+                                                    <input type="text" class="form-control" name="DiaDiem">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Ghi chú</label>
-                                                    <input type="text" value="Không" class="form-control"  name="ghichu">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Số lần mua</label>
-                                                    <input type="number" value="0" class="form-control"  name="solanmua">
+                                                    <input type="text" class="form-control" name="GhiChu" value="Không">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Số lần xem</label>
-                                                    <input type="number" value="0" class="form-control"  name="solanxem">
+                                                    <label class="control-label">Trạng thái giao hàng</label>
+                                                    <input type="text" class="form-control" name="TrangThaiGiaoHang" value="0">
                                                 </div>
                                             </div>
-                                             <div class="col-md-4">
+                                            <div class="col-md-4">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Sản phẩm mới</label>
-                                                    <input type="number" value="1" class="form-control"  name="sanphammoi">
+                                                    <label class="control-label">Trạng thái thanh toán</label>
+                                                    <input type="text" class="form-control" name="TrangThaiThanhToan" value="0">
                                                 </div>
                                             </div>
                                         </div>
+                                       
                                         
                                         <button type="submit" class="btn btn-primary pull-right">Thêm</button>
                                         <div class="clearfix"></div>

@@ -1,7 +1,7 @@
 @extends('adminDashboard.layout.master')
 
 @section('tittle')
-    Thêm loại sản phẩm
+    Đơn hàng
 @endsection
 
 @section('sidebar')
@@ -14,7 +14,7 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li>
+                    <li >
                         <a href="{{ route('hangsanxuat') }}">
                             <i class="fa fa-building-o"></i>
                             <p>Hãng sản xuất</p>
@@ -26,7 +26,7 @@
                             <p>Khách hàng</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="{{ route('loaisanpham') }}">
                             <i class="fa fa-list"></i>
                             <p>Loại sản phẩm</p>
@@ -50,7 +50,7 @@
                             <p>Tin tức</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="{{ route('donhang') }}">
                             <i class="fa fa-cart-plus"></i>
                             <p>Đơn hàng</p>
@@ -78,45 +78,62 @@
     <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-8">
-                            
-                            @if(count($errors) > 0)
-                                <div class="alert alert-danger">  <!--div đỏ  -->
-                                @foreach($errors->all() as $err)
-                                    {{$err}}<br>
-                                @endforeach
-                                </div>
-                            @endif
+                        <div class="col-md-12">
 
                             @if (session('thongbao'))
-                            <div class="alert alert-success">
-                                {{session('thongbao')}} 
-                            </div>
+                                <div class="alert alert-success">
+                                    {{session('thongbao')}}
+                                </div>
                             @endif
 
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
-                                    <h4 class="title">Thêm loại sản phẩm</h4>
-                                </div>
-                                <div class="card-content">
-                                    <form method="POST" action="admin/loaisanpham/them">
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Tên loại sản phẩm</label>
-                                                    <input type="text" class="form-control" name="tenLoaiSP">
-                                                </div>
-                                            </div>
+
+                                    <div class="row">
+                                        <div class="col-md-11">
+                                            <h4 class="title">Danh sách đơn hàng</h4>
                                         </div>
-                     
-                                        <button type="submit" class="btn btn-primary pull-right">Thêm</button>
-                                        <div class="clearfix"></div>
-                                    </form>
+                                        <div class="col-md-1">
+                                            <a href="admin/donhang/them"><button type="button" class="btn-primary-outline btn-circle btn-lg"> + </button></a>
+                                        </div>
+                                    </div>    
+                                    
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>Mã</th>
+                                            <th>Khách hàng</th>
+                                            <th>Ngày đặt hàng</th>
+                                            <th>Tên người nhận</th>
+                                            <th>Địa điểm giao</th>
+                                            <th>Ngày giao</th>
+                                            <th>Email</th>
+                                            <th>Điện thoại</th>
+                                            <th></th>
+                                            <th></th>
+                                        </thead>
+                                        <tbody>
+                                            @foreach($donhang as $key => $don)
+                                            <tr>
+
+                                                <td>{{$don->idDonHang}}</td>
+                                                <td>{{$don->HoTen}}</td>
+                                                <td>{{$don->NgayDatHang}}</td>
+                                                <td>{{$don->TenNguoiNhan}}</td>
+                                                <td>{{$don->DiaDiemGiao}}</td>
+                                                <td>{{$don->NgayGiaoHang}}</td>
+                                                <td>{{$don->Email}}</td>
+                                                <td>{{$don->DienThoai}}</td>
+                                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/donhang/xoa/{{$don->idDonHang}}" onclick="return xac_nhan_xoa('Bạn có chắc muốn xóa không?')"> Delete</a></td>
+                                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/donhang/sua/{{$don->idDonHang}}"> Edit</a></td>
+                                            </tr>
+                                           @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
