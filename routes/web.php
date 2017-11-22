@@ -30,7 +30,10 @@
         'uses' => 'KhachHangController@getDashboard'
     ]);
 */
-
+Route::get('/',[
+    'as' => 'trangchu',
+    'uses'=> 'PageController@getIndex'
+]);
 
 Route::group(['prefix'=>'admin'],function(){
 

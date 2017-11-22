@@ -143,18 +143,20 @@
 
                                          <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group label-floating">
+                                                <div class="form-group ">
                                                     <label class="control-label">Tóm tắt</label>
                                                     <textarea id="demo" class="form-control ckeditor" rows="8" name="tomTat">{{$tin->TomTat}}</textarea>
+                                                    <script type="text/javascript">ckeditor("tomTat")</script>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group label-floating">
+                                                <div class="form-group ">
                                                     <label class="control-label">Nội dung</label>
                                                     <textarea id="demo" class="form-control ckeditor" rows="8" name="noiDung">{{$tin->NoiDung}}</textarea>
+                                                    <script type="text/javascript">ckeditor("noiDung")</script>
                                                 </div>
                                             </div>
                                         </div>

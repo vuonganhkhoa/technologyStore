@@ -14,23 +14,45 @@ $(document).ready(function() {
                     }
                   });
 
-        $("#SanPham").change(function(){
+        $(".SanPham").change(function(){
+
+          
 
           var idSP = $(this).val();
 
           $.get("admin/ajax/giasanpham/"+idSP, function(data){
-             $("#GiaSP").val(data);    
+             $(".GiaSP").val(data);    
           });
 
           $.get("admin/ajax/giaKMsanpham/"+idSP, function(data){
-             $("#GiaKM").val(data);    
+             $(".GiaKM").val(data);    
           });
 
-          var SoLuong = $('#SoLuong').val();
+          var SoLuong = $('.SoLuong').val();
           $.get("admin/ajax/thanhtiensanpham/"+idSP+"/"+SoLuong, function(data){
-             $("#thanhtien").val(data);    
+             $(".thanhtien").val(data);    
           });
         });
+
+        $(".SoLuong").change(function(){
+
+          var idSP = $('.SanPham').val();
+
+          $.get("admin/ajax/giasanpham/"+idSP, function(data){
+
+             $(".GiaSP").val(data);    
+          });
+
+          $.get("admin/ajax/giaKMsanpham/"+idSP, function(data){
+             $(".GiaKM").val(data);    
+          });
+
+          var SoLuong = $('.SoLuong').val();
+          $.get("admin/ajax/thanhtiensanpham/"+idSP+"/"+SoLuong, function(data){
+             $(".thanhtien").val(data);    
+          });
+        });
+
 
 });
 

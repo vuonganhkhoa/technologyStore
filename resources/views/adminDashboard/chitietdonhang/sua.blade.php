@@ -126,7 +126,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="control-label">Chọn sản phẩm</label>
-                                                    <select class="form-control" name="SanPham" id="LoaiTin">
+                                                    <select class="form-control SanPham" name="SanPham" id="LoaiTin">
                                                       @foreach($sanpham as $sp)
                                                         <option value="{{$sp->idSP}}" @if($chitietdonhang->idSP==$sp->idSP) {{'selected'}} @endif>{{$sp->TenSP}}</option>
                                                       @endforeach
@@ -138,19 +138,19 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Số lượng</label>
-                                                    <input type="text" class="form-control" name="SoLuong" value="{{$chitietdonhang->SoLuong}}">
+                                                    <label class="control-label SoLuong">Số lượng</label>
+                                                    <input type="text" class="form-control" name="SoLuong" value="{{$chitietdonhang->SoLuong}}" id="SoLuong">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Giá sản phẩm</label>
-                                                    <input type="text" class="form-control" name="GiaSP" value="{{$chitietdonhang->GiaSP}}">
+                                                    <label class="control-label GiaSP">Giá sản phẩm</label>
+                                                    <input type="text" class="form-control" name="GiaSP" value="{{$chitietdonhang->GiaSP}}" id="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Giá khuyến mãi</label>
+                                                    <label class="control-label GiaKM">Giá khuyến mãi</label>
                                                     <input type="text" class="form-control" name="GiaKhuyenMai" value="{{$chitietdonhang->GiaKhuyenMai}}">
                                                 </div>
                                             </div>
@@ -159,8 +159,8 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Thành tiền</label>
-                                                    <input type="text" class="form-control" name="ThanhTien" value="{{$chitietdonhang->ThanhTien}}">
+                                                    <label class="control-label thanhtien">Thành tiền</label>
+                                                    <input type="text" class="form-control" name="ThanhTien" value="{{$chitietdonhang->ThanhTien}}" >
                                                 </div>
                                             </div>
                                         </div>

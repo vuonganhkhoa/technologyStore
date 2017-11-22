@@ -126,7 +126,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="control-label">Chọn sản phẩm</label>
-                                                    <select class="form-control" name="SanPham" id="SanPham">
+                                                    <select class="form-control SanPham" name="SanPham" id="SanPham">
                                                       @foreach($sanpham as $sp)
                                                         <option value="{{$sp->idSP}}">{{$sp->TenSP}}</option>
                                                       @endforeach
@@ -139,19 +139,19 @@
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Số lượng</label>
-                                                    <input type="text" class="form-control" name="SoLuong" value="1" id="SoLuong">
+                                                    <input type="text" class="form-control SoLuong" name="SoLuong" value="1" id="SoLuong">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating" >
                                                     <label class="control-label">Giá sản phẩm</label>
-                                                    <input type="text" class="form-control" name="GiaSP" value="0" id="GiaSP">
+                                                    <input type="text" class="form-control GiaSP" name="GiaSP" value="0" id="GiaSP">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Giá khuyến mãi</label>
-                                                    <input type="text" class="form-control" name="GiaKhuyenMai" value="0" id="GiaKM">
+                                                    <input type="text" class="form-control GiaKM" name="GiaKhuyenMai" value="0" id="GiaKM">
                                                 </div>
                                             </div>
                                         </div>
@@ -160,7 +160,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Thành tiền</label>
-                                                    <input type="text" class="form-control" name="ThanhTien" value="0" id="thanhtien">
+                                                    <input type="text" class="form-control thanhtien" name="ThanhTien" value="0" id="thanhtien">
                                                 </div>
                                             </div>
                                         </div>
