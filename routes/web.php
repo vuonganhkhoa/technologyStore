@@ -35,7 +35,15 @@ Route::get('/',[
     'uses'=> 'PageController@getIndex'
 ]);
 
-Route::group(['prefix'=>'admin'],function(){
+
+//Route::get('login', 'Auth\LoginController@getLogin');
+//Route::post('login', 'Auth\LoginController@postLogin');
+Route::get('dangnhap','KhachHangController@getLogin');
+Route::post('dangnhap','KhachHangController@postLogin');
+Route::get('dangxuat','KhachHangController@getLogout');
+
+
+Route::group(['prefix'=>'admin','middleware'=>'Login'],function(){
 
     Route::get('/', [
         'as'   => 'dashboard',

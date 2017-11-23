@@ -321,7 +321,7 @@
                                             
                                             @foreach ($dashboard as $dash_board)
                                             <tr>
-                                                <td>{{$dash_board->idKhachHang}}</td>
+                                                <td>{{$dash_board->id}}</td>
                                                 <td>{{$dash_board->HoTen}}</td>
                                                 <td>{{$dash_board->DienThoai}}</td>
                                                 <td>{{$dash_board->Diachi}}</td>

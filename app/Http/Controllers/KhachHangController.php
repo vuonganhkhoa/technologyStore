@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Hash;
+
 use App\KhachHang;
 use App\DonHang;
 use App\SanPham;
@@ -15,9 +18,9 @@ class KhachHangController extends Controller
     public function getDashboard(){
 
     	$dashboard = DB::table('KhachHang')
-    				->join('DonHang', 'DonHang.idKhachHang', '=', 'KhachHang.idKhachHang') // Gộp bảng
+    				->join('DonHang', 'DonHang.idKhachHang', '=', 'KhachHang.id') // Gộp bảng
     				->get([
-    						'KhachHang.idKhachHang',
+    						'KhachHang.id',
     					 	'HoTen', 
     					 	'KhachHang.DienThoai',
     					    'Diachi', 
@@ -69,7 +72,7 @@ class KhachHangController extends Controller
       $khachhang = new KhachHang;
       $khachhang ->HoTen = $request->tenKhachHang;
       $khachhang ->Email = $request->emailKhachHang;
-      $khachhang ->MatKhau = bcrypt($request->matkhauKhachHang);   //bcrypt: mã hóa pass
+      $khachhang ->password = Hash::make($request->matkhauKhachHang);   //bcrypt: mã hóa pass
       $khachhang ->DienThoai = $request->dienthoaiKhachHang;
       $khachhang ->DiaChi = $request->diachiKhachHang;
       $khachhang ->NgaySinh = $request->ngaysinhKhachHang;
@@ -135,7 +138,7 @@ class KhachHangController extends Controller
            'matkhaunhaplaiKhachHang.same'=>'Mật khẩu nhập lại chưa khớp'
         ]);
 
-        $khachhang->MatKhau = bcrypt($request->matkhauKhachHang);   //bcrypt: mã hóa pass
+        $khachhang->password = Hash::make($request->matkhauKhachHang);   //bcrypt: mã hóa pass
 
       }
 
@@ -151,5 +154,35 @@ class KhachHangController extends Controller
       $tintuc  = Tin::where('TieuDe', 'like', '%'.$request->key.'%')->get();
 
       return view('adminDashboard.khachhang.timkiem',compact('khachhang', 'sanpham', 'tintuc'));
+    }
+
+    public function getLogin(){
+        return view('adminDashboard.login');
+    }
+    public function postLogin(Request $request){
+
+         $this->validate($request,[
+            'username'=>'required|email',
+            'password'=>'required'
+          ],[
+            'username.required' => 'Bạn chưa nhập tên đăng nhập.',
+            'username.email' => 'Tên đăng nhập phải là email.',
+            'password.required' => 'Bạn chưa nhập mật khẩu.'
+          ]);
+
+        $login = array(
+            'Email' => $request->username,
+            'password' => $request->password,
+            'KichHoat'=> 1
+        );
+        if(Auth::attempt($login)){
+            return redirect()->route('dashboard');
+        }else{
+            return redirect()->back()->with('thongbao', 'Tên đăng nhập hoặc mật khẩu không đúng.');
+        }
+    }
+    public function getLogout(){
+      Auth::logout();
+      return redirect('dangnhap');
     }
 }

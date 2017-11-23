@@ -9,7 +9,7 @@
                     </div>
                     <div class="topbar-right">
                         <ul class="topbar-nav clearfix">
-                            <li><a href="{{route('dashboard')}}" class="login">Đăng nhập</a></li>
+                            <li><a href="dangnhap" class="login">Đăng nhập</a></li>
                             <li class="dropdown">
                                 <a href="#" class="account dropdown-toggle" data-toggle="dropdown">Tài khoản</a>
                                 <ul class="dropdown-menu dropdown-menu-right">
