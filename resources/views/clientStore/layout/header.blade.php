@@ -129,7 +129,7 @@
                             <div class="mega-container visible-lg visible-md">
                                 <div class="navleft-container">
                                     <div class="mega-menu-title"><h3>MENU</h3></div>
-                                    <div class="mega-menu-category">
+                                    <div class="mega-menu-category" style="display:none;">
                                         <ul class="nav">
                                             <li>
                                                 <a href="#">Điện thoại</a>
@@ -139,14 +139,9 @@
                                                             <div class="col-md-12">
                                                                 <h3>Hãng sản suất</h3>
                                                                 <ul class="nav">
-                                                                    <li><a href="#">Apple</a></li>
-                                                                    <li><a href="#">Samsung</a></li>
-                                                                    <li><a href="#">HTC</a></li>
-                                                                    <li><a href="#">Huawei</a></li>
-                                                                    <li><a href="#">Asus</a></li>
-                                                                    <li><a href="#">LG</a></li>
-                                                                    <li><a href="#">nokia</a></li>
-                                                                    <li><a href="#">Sony</a></li>
+                                                                    @foreach ($hangsanxuat as $hsx)
+                                                                    <li><a href="#">{{$hsx->TenHangSX}}</a></li>
+                                                                    @endforeach
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -165,12 +160,6 @@
                                                                 <ul class="nav">
                                                                     <li><a href="#">Apple</a></li>
                                                                     <li><a href="#">Samsung</a></li>
-                                                                    <li><a href="#">HTC</a></li>
-                                                                    <li><a href="#">Huawei</a></li>
-                                                                    <li><a href="#">Asus</a></li>
-                                                                    <li><a href="#">LG</a></li>
-                                                                    <li><a href="#">nokia</a></li>
-                                                                    <li><a href="#">Sony</a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -190,9 +179,10 @@
                         </div>
                         <div class="col-md-9">
                             <ul class="menu clearfix visible-lg visible-md">
-                                <li><a href="index.php">Trang chủ</a></li>
-                                <li><a href="grid.html">Sản phẩm</a></li>
-                                <li><a href="blog.html">Tin tức công nghệ</a></li>
+                                <li><a href="{{route('trangchu')}}">Trang chủ</a></li>
+                                <li><a href="{{route('san_pham')}}">Sản phẩm</a></li>
+                                <li><a href="{{route('tin_tuc')}}">Tin tức công nghệ</a></li>
+                                <li><a href="{{route('lienhe')}}">Liên hệ</a></li>
                             </ul>
                         </div>
                     </div>

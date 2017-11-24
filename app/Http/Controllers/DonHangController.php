@@ -13,7 +13,7 @@ class DonHangController extends Controller
     public function getDanhSach(){
 
     	$donhang = DB::table('DonHang')
-    				->join('KhachHang', 'KhachHang.idKhachHang', '=', 'DonHang.idKhachHang') // Gộp bảng
+    				->join('KhachHang', 'KhachHang.id', '=', 'DonHang.idKhachHang') // Gộp bảng
     				->get([
     						'DonHang.idDonHang',
     						'DonHang.NgayDatHang',

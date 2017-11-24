@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\HangSanXuat;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('clientStore.layout.header' , function($view){
+            $hangsanxuat = HangSanXuat::all();
+            $view->with('hangsanxuat',$hangsanxuat);
+        });
     }
 
     /**

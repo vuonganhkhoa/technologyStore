@@ -3,6 +3,12 @@
 
 @section('content')
 
+<style type="text/css" media="screen">
+    .price{
+        font-size: 16px !important;
+        font-weight: bold !important;
+    }
+</style>
 <div class="main">
             <div class="container">
                 <div class="row">
@@ -64,8 +70,13 @@
                                                     <div class='new-icon'><span>Mới</span></div>
                                                 </div>
                                                 @endif
+                                                @if($sp_noibat->GiaKhuyenMai != 0)
+                                                <div class="product_icon">
+                                                    <div class="sale-icon"><span>Giảm</span></div>
+                                                </div>
+                                                @endif
                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="public/clientassets/assets/images/products/8.jpg" alt="Nunc facilisis" />
+                                                    <img src="public/clientassets/upload/sanpham/{{$sp_noibat->urlHinhSP}}" alt="Nunc facilisis" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -79,15 +90,20 @@
                                                 <h2 class="product-name"><a href="#" title="Nunc facilisis">{{$sp_noibat->TenSP}}</a></h2>
                                                 <div class="price-box">
                                                     @if($sp_noibat->GiaKhuyenMai!=0)
-                                                    <p class="special-price">
+                                                    <p class="special-price price">
                                                         <span class="price-label">Khuyến mãi</span>
                                                         <span class="price">{{number_format($sp_noibat->GiaKhuyenMai)}}</span>
                                                     </p>
-                                                    @endif
-                                                    <p>
+                                                    <p class="old-price price">
                                                         <span class="price-label">Giá: </span>
                                                         <span class="price">{{number_format($sp_noibat->GiaSP)}}</span>
                                                     </p>
+                                                    @else
+                                                    <p class="price">
+                                                        <span class="price-label">Giá: </span>
+                                                        <span class="price">{{number_format($sp_noibat->GiaSP)}}</span>
+                                                    </p>
+                                                    @endif
                                                 </div>
 
                                             </div>
@@ -115,10 +131,14 @@
                                             <div class="images-container">
                                                 <div class="product_icon">
                                                     <div class='new-icon'><span>Mới</span></div>
-                                                    @if($sp_moi->GiaKhuyenMai != 0)<div class="sale-icon"><span>sale</span></div>@endif
+                                                    @if($sp_noibat->GiaKhuyenMai != 0)
+                                                    <div class="product_icon">
+                                                        <div class="sale-icon"><span>Giảm</span></div>
+                                                    </div>
+                                                    @endif
                                                 </div>
                                                 <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="public/clientassets/assets/images/products/1.jpg" alt="Nunc facilisis" />
+                                                    <img src="public/clientassets/upload/sanpham/{{$sp_moi->urlHinhSP}}" alt="Nunc facilisis" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -132,15 +152,20 @@
                                                 <h2 class="product-name"><a href="#" title="Nunc facilisis">{{$sp_moi->TenSP}}</a></h2>
                                                 <div class="price-box">
                                                     @if($sp_moi->GiaKhuyenMai!=0)
-                                                    <p class="special-price">
+                                                    <p class="special-price price">
                                                         <span class="price-label">Khuyến mãi</span>
-                                                        <span class="price">{{$sp_moi->GiaKhuyenMai}}</span>
+                                                        <span class="price">{{number_format($sp_moi->GiaKhuyenMai)}}</span>
                                                     </p>
-                                                    @endif
-                                                    <p>
+                                                    <p class="old-price price">
+                                                        <span class="price-label">Giá: </span>
+                                                        <span class="old-price">{{number_format($sp_moi->GiaSP)}}</span>
+                                                    </p>
+                                                    @else
+                                                    <p class="price">
                                                         <span class="price-label">Giá: </span>
                                                         <span class="price">{{number_format($sp_moi->GiaSP)}}</span>
                                                     </p>
+                                                    @endif
                                                 </div>
 
                                             </div>
@@ -175,22 +200,23 @@
                                     @foreach ($san_pham_ban_chay as $sp_banchay)
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="public/clientassets/assets/images/products/18.jpg"></a>
+
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="public/clientassets/upload/sanpham/{{$sp_banchay->urlHinhSP}}"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">{{$sp_banchay->TenSP}}</a></h2>
                                             <div class="price-box">
                                                 @if($sp_banchay->GiaKhuyenMai != 0)
-                                                <p class="special-price">
-                                                    <span class="price">{{$sp_banchay->GiaSP}}</span>
+                                                <p class="special-price price">
+                                                    <span class="price">{{number_format($sp_banchay->GiaSP)}}</span>
                                                 </p>
-                                                <p class="old-price">
-                                                    <span class="price">{{$sp_banchay->GiaKhuyenMai}}</span>
+                                                <p class="old-price price">
+                                                    <span class="price">{{number_format($sp_banchay->GiaKhuyenMai)}}</span>
                                                 </p>
                                                 
                                                 @else
-                                                <p class="special-price">
-                                                    <span class="price">{{$sp_banchay->GiaSP}}</span>
+                                                <p class="special-price price">
+                                                    <span class="price">{{number_format($sp_banchay->GiaSP)}}</span>
                                                 </p>
                                                 @endif
                                             </div>
@@ -206,16 +232,16 @@
                                     @foreach ($san_pham_giam_gia as $sp_giamgia)
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="public/clientassets/assets/images/products/15.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="public/clientassets/upload/sanpham/{{$sp_giamgia->urlHinhSP}}"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">{{$sp_giamgia->TenSP}} </a></h2>
                                             <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">{{$sp_giamgia->GiaKhuyenMai}}</span>
+                                                <p class="special-price price">
+                                                    <span class="price">{{number_format($sp_giamgia->GiaKhuyenMai)}}</span>
                                                 </p>
-                                                <p class="old-price">
-                                                    <span class="price">{{$sp_giamgia->GiaSP}}</span>
+                                                <p class="old-price price">
+                                                    <span class="price">{{number_format($sp_giamgia->GiaSP)}}</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -228,15 +254,15 @@
                                 <div class="title-group"><h2>Phụ kiện</h2></div>
                                 <div class="product-list">
                                     @foreach ($phu_kien as $phukien)
-                                    <div class="products-grid">
+                                    <div class="products-grid" style="margin-top: 5px;">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="public/clientassets/assets/images/products/21.jpg"></a>
+                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="public/clientassets/upload/sanpham/{{$phukien->urlHinhSP}}"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">{{$phukien->TenSP}}</a></h2>
                                             <div class="price-box">
-                                                <p class="special-price">
-                                                    <span class="price">{{$phukien->GiaSP}}</span>
+                                                <p class="special-price price">
+                                                    <span class="price">{{number_format($phukien->GiaSP)}}</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -260,21 +286,29 @@
                 </div> 
 
                 <div class="row">
-                    @foreach ($loai_tin as $loai)
-                    <div class="col-md-3 col-sm-6">
+
+                    <?php $dem=1; ?>
+                    @foreach ($tin_tuc as $tin)
+                    
+                    <?php if($dem==1){ echo "<div class='row'>";} ?>
+                    <div class="col-md-6 col-sm-6">
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="image-cat">
-                                    <a href="#/"><img alt="Electronic" src="public/clientassets/assets/images/products/img-0{{$loai->idLoaiTin}}.jpg"></a>
+                                    <a href="{{route('tintuc_chitiet', $tin->idTin)}}"><img alt="Electronic" src="public/clientassets/upload/tintuc/{{$tin->urlHinhTin}}"></a>
                                 </div>
                             </div>
                             <div class="col-xs-6">
-                                <div class="name-cat"><h3>{{$loai->TieuDeLoaiTin}}</h3></div>
-                                <a class="view-more" href="#">Xem thêm</a>
+                                <div class=""><h4>{{$tin->TieuDe}}</h4></div>
+                                <a class="view-more" href="{{route('tintuc_chitiet', $tin->idTin)}}">Xem thêm</a>
                             </div>
                         </div>
                     </div>
+                    <?php if($dem==2){ echo "</div>";$dem=0;} ?>
+                    <?php $dem++; ?>
+
                     @endforeach
+                   
                     <!-- <div class="col-md-3 col-sm-6">
                         <div class="row">
                             <div class="col-xs-6">
@@ -296,8 +330,8 @@
                             </ul>
                         </div>
                     </div> -->
-
                 </div>
+                 
             </div>
 </div>
 

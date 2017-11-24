@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="#">
+    <base href="{{asset('')}}">
 
     <title>TechnologyStore</title>
     <link href="public/clientassets/assets/css/bootstrap.min.css" rel="stylesheet">

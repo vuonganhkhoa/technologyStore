@@ -34,7 +34,38 @@ Route::get('/',[
     'as' => 'trangchu',
     'uses'=> 'PageController@getIndex'
 ]);
-
+Route::get('lienhe',[
+    'as' => 'lienhe',
+    'uses'=> 'PageController@getContact'
+]);
+Route::get('tintuc',[
+    'as' => 'tin_tuc',
+    'uses'=> 'PageController@getNews'
+]);
+Route::get('sanpham',[
+    'as' => 'san_pham',
+    'uses'=> 'PageController@getProduct'
+]);
+Route::get('tintuc_chitiet/{tin}',[
+    'as' => 'tintuc_chitiet',
+    'uses'=> 'PageController@getNewsDetail'
+]);
+Route::get('giohang',[
+    'as' => 'giohang',
+    'uses'=> 'PageController@getCart'
+]);
+Route::get('thanhtoan',[
+    'as' => 'thanhtoan',
+    'uses'=> 'PageController@getCheckout'
+]);
+Route::get('sanpham_chitiet',[
+    'as' => 'sanpham_chitiet',
+    'uses'=> 'PageController@getProductDetail'
+]);
+Route::get('sanpham_theoHangSX',[
+    'as' => 'sanpham_theoHangSX',
+    'uses'=> 'PageController@getProductByProvider'
+]);
 
 //Route::get('login', 'Auth\LoginController@getLogin');
 //Route::post('login', 'Auth\LoginController@postLogin');
