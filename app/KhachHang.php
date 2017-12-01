@@ -8,16 +8,15 @@ class KhachHang extends Model
 {
     
     protected $table   = 'KhachHang';
-    //protected $primaryKey = 'idKhachHang';
+    protected $primaryKey = 'idKhachHang';
     public $timestamps = false;
-    private $remember_token=false;
 
     public function BinhLuan(){
 
-    	return $this->hasMany('App\BinhLuan', 'idKhachHang', 'id');
+    	return $this->hasMany('App\BinhLuan', 'idKhachHang', 'idKhachHang');
     }
     public function DonHang(){
 
-    	return $this->hasMany('App\DonHang', 'idKhachHang', 'id');
+    	return $this->hasMany('App\DonHang', 'idKhachHang', 'idKhachHang');
     }
 }
