@@ -117,7 +117,7 @@
                                                 <td>{{$sp->TenSP}}</td>
                                                 <td>{{$sp->TenHangSX}}</td>
                                                 <td>{{number_format($sp->GiaSP)}}</td>
-                                                <td>{{$sp->GiaKhuyenMai}}</td>
+                                                <td>{{number_format($sp->GiaKhuyenMai)}}</td>
                                                 <td>{{$sp->TonKho}}</td>
                                                 <td>{{$sp->SanPhamMoi}}</td>
                                                 <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/sanpham/xoa/{{$sp->idSP}}" onclick="return xac_nhan_xoa('Bạn có chắc muốn xóa sản phẩm này?')"> Delete</a></td>

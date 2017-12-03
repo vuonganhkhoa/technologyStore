@@ -34,18 +34,47 @@ Route::get('/',[
     'as' => 'trangchu',
     'uses'=> 'PageController@getIndex'
 ]);
-
-Route::get('sanpham',[
-    'as' => 'san_pham',
-    'uses'=> 'PageController@getSanPham'
+Route::get('lienhe',[
+    'as' => 'lienhe',
+    'uses'=> 'PageController@getContact'
 ]);
-
 Route::get('tintuc',[
     'as' => 'tin_tuc',
-    'uses'=> 'PageController@getTinTuc'
+    'uses'=> 'PageController@getNews'
+]);
+Route::get('sanpham',[
+    'as' => 'san_pham',
+    'uses'=> 'PageController@getProduct'
+]);
+Route::get('tintuc_chitiet/{tin}',[
+    'as' => 'tintuc_chitiet',
+    'uses'=> 'PageController@getNewsDetail'
+]);
+Route::get('giohang',[
+    'as' => 'giohang',
+    'uses'=> 'PageController@getCart'
+]);
+Route::get('thanhtoan',[
+    'as' => 'thanhtoan',
+    'uses'=> 'PageController@getCheckout'
+]);
+Route::get('sanpham_chitiet',[
+    'as' => 'sanpham_chitiet',
+    'uses'=> 'PageController@getProductDetail'
+]);
+Route::get('sanpham_theoHangSX',[
+    'as' => 'sanpham_theoHangSX',
+    'uses'=> 'PageController@getProductByProvider'
 ]);
 
-Route::group(['prefix'=>'admin'],function(){
+//Route::get('login', 'Auth\LoginController@getLogin');
+//Route::post('login', 'Auth\LoginController@postLogin');
+Route::get('dangnhap','KhachHangController@getLogin');
+Route::post('dangnhap','KhachHangController@postLogin');
+Route::get('dangxuat','KhachHangController@getLogout');
+
+
+Route::group(['prefix'=>'admin','middleware'=>'Login'],function(){
 
     Route::get('/', [
         'as'   => 'dashboard',
