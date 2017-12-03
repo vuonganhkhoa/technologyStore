@@ -4,7 +4,7 @@
 <div class="main">
             <div class="container">
                 <div class="row" style="margin-top: 20px;"></div>
-                <div class="row">
+                <div class="row"> 
                     <div class="col-sm-9 col-right">
                         <div class="product-view">
                             <div class="row">

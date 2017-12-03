@@ -65,15 +65,15 @@ return [
     */
 
     'providers' => [
-        'users' => [
+       /* 'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
-        ],
+            'model' => App\KhachHang::class,
+        ],*/
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'users' => [
+            'driver' => 'database',
+            'table' => 'KhachHang',
+        ],
     ],
 
     /*
@@ -95,8 +95,8 @@ return [
         'users' => [
             'provider' => 'users',
             'table' => 'password_resets',
+            //'table' => 'KhachHang',
             'expire' => 60,
         ],
     ],
-
 ];

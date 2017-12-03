@@ -116,15 +116,15 @@
 
                                             @foreach ($khachhang as $key=>$kh)
                                             <tr>
-                                                <td>{{$kh->idKhachHang}}</td>
+                                                <td>{{$kh->id}}</td>
                                                 <td>{{$kh->HoTen}}</td>
                                                 <td>{{$kh->Email}}</td>
                                                 <td>{{$kh->NgaySinh}}</td>
                                                 <td>{{$kh->DienThoai}}</td>
                                                 <td>{{$kh->Diachi}}</td>
                                                 <td>{{$kh->NgayDangKy}}</td>
-                                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/khachhang/xoa/{{$kh->idKhachHang}}" onclick="return xac_nhan_xoa('Bạn có chắc muốn xóa?')"> Delete</a></td>
-                                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/khachhang/sua/{{$kh->idKhachHang}}"> Edit</a></td>
+                                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/khachhang/xoa/{{$kh->id}}" onclick="return xac_nhan_xoa('Bạn có chắc muốn xóa?')"> Delete</a></td>
+                                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/khachhang/sua/{{$kh->id}}"> Edit</a></td>
                                             </tr>
                                             @endforeach
                                            
