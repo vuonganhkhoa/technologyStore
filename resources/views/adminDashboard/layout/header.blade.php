@@ -45,10 +45,10 @@
                                     <p class="hidden-lg hidden-md">Profile</p>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="">{{ Auth::user()->HoTen }}</a>
+                                            <a href="">Sign In</a>
                                         </li>
                                         <li>
-                                            <a href="dangxuat">Đăng xuất</a>
+                                            <a href="">Sign Out</a>
                                         </li>
                                     </ul>
                                 </a>

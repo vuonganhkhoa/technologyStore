@@ -9,7 +9,7 @@
                     </div>
                     <div class="topbar-right">
                         <ul class="topbar-nav clearfix">
-                            <li><a href="dangnhap" class="login">Đăng nhập</a></li>
+                            <li><a href="{{route('dashboard')}}" class="login">Đăng nhập</a></li>
                             <li class="dropdown">
                                 <a href="#" class="account dropdown-toggle" data-toggle="dropdown">Tài khoản</a>
                                 <ul class="dropdown-menu dropdown-menu-right">
@@ -129,7 +129,7 @@
                             <div class="mega-container visible-lg visible-md">
                                 <div class="navleft-container">
                                     <div class="mega-menu-title"><h3>MENU</h3></div>
-                                    <div class="mega-menu-category" style="display:none;">
+                                    <div class="mega-menu-category">
                                         <ul class="nav">
                                             <li>
                                                 <a href="#">Điện thoại</a>
@@ -139,8 +139,8 @@
                                                             <div class="col-md-12">
                                                                 <h3>Hãng sản suất</h3>
                                                                 <ul class="nav">
-                                                                    @foreach ($hangsanxuat as $hsx)
-                                                                    <li><a href="#">{{$hsx->TenHangSX}}</a></li>
+                                                                    @foreach($hangsanxuat as $hsx)
+                                                                    <li><a href="{{route('sanphamhangsx',$hsx->idHangSX)}}">{{$hsx->TenHangSX}}</a></li>
                                                                     @endforeach
                                                                 </ul>
                                                             </div>
@@ -152,19 +152,6 @@
                                             </li>
                                             <li>
                                                 <a href="#">Máy tính bảng</a>
-                                                <div class="wrap-popup" style="width: 200px;">
-                                                    <div class="popup">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <h3>Hãng sản suất</h3>
-                                                                <ul class="nav">
-                                                                    <li><a href="#">Apple</a></li>
-                                                                    <li><a href="#">Samsung</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </li>
                                                
                                             <li class="nosub"><a href="#">Sản phẩm mới</a></li>
@@ -179,10 +166,9 @@
                         </div>
                         <div class="col-md-9">
                             <ul class="menu clearfix visible-lg visible-md">
-                                <li><a href="{{route('trangchu')}}">Trang chủ</a></li>
+                                <li><a href="index.php">Trang chủ</a></li>
                                 <li><a href="{{route('san_pham')}}">Sản phẩm</a></li>
-                                <li><a href="{{route('tin_tuc')}}">Tin tức công nghệ</a></li>
-                                <li><a href="{{route('lienhe')}}">Liên hệ</a></li>
+                                <li><a href="blog.html">Tin tức công nghệ</a></li>
                             </ul>
                         </div>
                     </div>
