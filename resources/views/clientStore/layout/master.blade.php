@@ -8,9 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="#">
-    <base href="{{asset('')}}">
 
     <title>TechnologyStore</title>
+    <base href="{{asset('/')}}">
     <link href="public/clientassets/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/clientassets/assets/css/nivo-slider.css" rel="stylesheet">
     <link href="public/clientassets/assets/css/animate.css" rel="stylesheet">

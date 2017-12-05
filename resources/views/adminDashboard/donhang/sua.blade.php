@@ -115,7 +115,7 @@
                                                     <label class="control-label">Chọn khách hàng</label>
                                                     <select class="form-control" name="KhachHang" id="LoaiTin">
                                                       @foreach($khachhang as $k)
-                                                        <option value="{{$k->id}}" @if($donhang->idKhachHang==$k->id) {{'selected'}} @endif>{{$k->HoTen}}</option>
+                                                        <option value="{{$k->idKhachHang}}" @if($donhang->idKhachHang==$k->idKhachHang) {{'selected'}} @endif>{{$k->HoTen}}</option>
                                                       @endforeach
                                                     </select>
                                                 </div>

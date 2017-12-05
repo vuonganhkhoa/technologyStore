@@ -16,26 +16,12 @@ Route::get('/',[
     'as' => 'trangchu',
     'uses'=> 'PageController@getIndex'
 ]);
-Route::get('lienhe',[
-    'as' => 'lienhe',
-    'uses'=> 'PageController@getContact'
-]);
-Route::get('tintuc',[
-    'as' => 'tin_tuc',
-    'uses'=> 'PageController@getNews'
-]);
+
 Route::get('sanpham',[
     'as' => 'san_pham',
-    'uses'=> 'PageController@getProduct'
+    'uses'=> 'PageController@getSanPham'
 ]);
-Route::get('tintuc_chitiet/{tin}',[
-    'as' => 'tintuc_chitiet',
-    'uses'=> 'PageController@getNewsDetail'
-]);
-Route::get('giohang',[
-    'as' => 'giohang',
-    'uses'=> 'PageController@getCart'
-]);
+
 Route::get('thanhtoan',[
     'as' => 'thanhtoan',
     'uses'=> 'PageController@getCheckout'
@@ -54,6 +40,12 @@ Route::get('timkiem',[
 Route::get('sanpham_hsx/{id_HangSX}',[
     'as' => 'sanpham_hsx',
     'uses'=> 'PageController@getProductByProvider'
+
+
+Route::get('sanpham_hangsx/{id_HangSX}',[
+    'as'=> 'sanphamhangsx',
+    'uses'=> 'PageController@getSanPham_HangSX'
+
 ]);
 Route::get('maytinhbang',[
     'as' => 'maytinhbang',
@@ -104,8 +96,18 @@ Route::get('dangnhap','KhachHangController@getLogin');
 Route::post('dangnhap','KhachHangController@postLogin');
 Route::get('dangxuat','KhachHangController@getLogout');
 
+Route::get('tintuc',[
+    'as' => 'tin_tuc',
+    'uses'=> 'PageController@getTinTuc'
+]);
 
-Route::group(['prefix'=>'admin','middleware'=>'Login'],function(){
+
+Route::get('chitiet_tintuc/{tin}',[
+    'as'=>'tintuc_chitiet',
+    'uses'=> 'PageController@getTinTucChiTiet'
+]);
+
+Route::group(['prefix'=>'admin'],function(){
 
     Route::get('/', [
         'as'   => 'dashboard',
