@@ -15,14 +15,14 @@
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <li><a title="Tài khoản cá nhân" href="account.html">Tài khoản cá nhân</a></li>
                                     <li><a title="Sản phẩm yêu thích" href="wishlist.html">Sản phẩm yêu thích</a></li>
-                                    <li><a title="Giỏ hàng" href="cart.html">Giỏ hàng</a></li>
-                                    <li><a title="Thanh toán" href="checkout.html">Thanh toán</a></li>
+                                    <li><a title="Giỏ hàng" href="{{ route('giohang') }}">Giỏ hàng</a></li>
+                                    <li><a title="Thanh toán" href="{{ route('thanhtoan') }}">Thanh toán</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="currency dropdown-toggle" data-toggle="dropdown">Dong</a>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#">Dong</a></li>
+                                    <li><a href="#">Đồng</a></li>
                                     <li><a href="#">US Dollar</a></li>
                                 </ul>
                             </li>
@@ -42,7 +42,7 @@
                     <div class="row">
 
                         <div class="col-md-3">
-                            <a href="index.php" class="logo"><img src="public/clientassets/assets/images/logo.png" alt=""></a>
+                            <a href="./" class="logo"><img src="public/clientassets/assets/images/logo.png" alt=""></a>
                         </div>
                         
                         <div class="col-md-9">
@@ -74,8 +74,8 @@
                                     </div>
                                 </div>
                             </div><!-- /.support-client -->
-                            <form class="form-search">
-                                <input type="text" class="input-text" name="q" id="search" placeholder="Tìm sản phẩm...">
+                            <form class="form-search" action="{{ route('timkiem') }}">
+                                <input type="text" class="input-text" name="key" id="search" placeholder="Tìm sản phẩm...">
                                 <!-- <div class="dropdown">
                                     <button type="button" class="btn" data-toggle="dropdown">All category <span class="fa fa-angle-down"></span></button>
                                     <ul class="dropdown-menu dropdown-menu-right">
@@ -91,7 +91,7 @@
                                 <div class="top-cart-title">
                                     <a href="cart.html" class="dropdown-toggle" data-toggle="dropdown">
                                         Giỏ hàng
-                                        <span class="price"> dong</span>
+                                        <span class="price">0 đồng</span>
                                     </a>
                                     <!-- <div class="dropdown-menu dropdown-menu-right">
                                         <div class="cart-listing">
@@ -140,7 +140,7 @@
                                                                 <h3>Hãng sản suất</h3>
                                                                 <ul class="nav">
                                                                     @foreach ($hangsanxuat as $hsx)
-                                                                    <li><a href="#">{{$hsx->TenHangSX}}</a></li>
+                                                                    <li><a href="{{route('sanpham_hsx', $hsx->idHangSX)}}">{{$hsx->TenHangSX}}</a></li>
                                                                     @endforeach
                                                                 </ul>
                                                             </div>
@@ -150,9 +150,9 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <a href="#">Máy tính bảng</a>
-                                                <div class="wrap-popup" style="width: 200px;">
+                                            <li class="nosub">
+                                                <a href="{{ route('maytinhbang') }}">Máy tính bảng</a>
+                                                <!-- <div class="wrap-popup" style="width: 200px;">
                                                     <div class="popup">
                                                         <div class="row">
                                                             <div class="col-md-12">
@@ -164,13 +164,13 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </li>
                                                
-                                            <li class="nosub"><a href="#">Sản phẩm mới</a></li>
-                                            <li class="nosub"><a href="#">Sản phẩm bán chạy</a></li>
-                                            <li class="nosub"><a href="#">Sản phẩm khuyến mãi</a></li> 
-                                            <li class="nosub"><a href="#">Phụ kiện khác</a></li> 
+                                            <li class="nosub"><a href="{{ route('sanphammoi') }}">Sản phẩm mới</a></li>
+                                            <li class="nosub"><a href="{{ route('sanphambanchay') }}">Sản phẩm bán chạy</a></li>
+                                            <li class="nosub"><a href="{{ route('sanphamkhuyenmai') }}">Sản phẩm khuyến mãi</a></li> 
+                                            <li class="nosub"><a href="{{ route('phukien') }}">Phụ kiện khác</a></li> 
 
                                         </ul>
                                     </div>

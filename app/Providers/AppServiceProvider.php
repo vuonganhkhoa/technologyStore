@@ -14,10 +14,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('clientStore.layout.header' , function($view){
+        view()->composer(['clientStore.layout.header', 'clientStore.layout.footer'] , function($view){
             $hangsanxuat = HangSanXuat::all();
             $view->with('hangsanxuat',$hangsanxuat);
         });
+
     }
 
     /**

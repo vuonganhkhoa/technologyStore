@@ -41,7 +41,7 @@
                                                 @endif
 
                                             <a href="{{ route('sanpham_chitiet', $sp->idSP) }}" title="Nunc facilisis" class="product-image">
-                                                <img src="public/clientassets/upload/sanpham/{{$sp->urlHinhSP}}" alt="Nunc facilisis" height="250px"/>
+                                                <img src="public/clientassets/upload/sanpham/{{$sp->urlHinhSP}} " height="250px" alt="Nunc facilisis" />
                                             </a>
                                             <div class="box-hover">
                                                 <ul class="add-to-links">

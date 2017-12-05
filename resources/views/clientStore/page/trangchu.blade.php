@@ -75,19 +75,19 @@
                                                     <div class="sale-icon"><span>Giảm</span></div>
                                                 </div>
                                                 @endif
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="public/clientassets/upload/sanpham/{{$sp_noibat->urlHinhSP}}" alt="Nunc facilisis" />
+                                                <a href="{{route('sanpham_chitiet', $sp_noibat->idSP)}}" title="{{$sp_noibat->TenSP}}" class="product-image">
+                                                    <img src="public/clientassets/upload/sanpham/{{$sp_noibat->urlHinhSP}}" alt="{{$sp_noibat->TenSP}}" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
-                                                        <li><a href="#" class="link-quickview">Chi tiết</a></li>
+                                                        <li><a href="{{route('sanpham_chitiet', $sp_noibat->idSP)}}" class="link-quickview">Chi tiết</a></li>
                                                         <li><a href="#" class="link-wishlist">Yêu thích</a></li>
                                                         <li><a href="#" class="link-cart">Mua hàng</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">{{$sp_noibat->TenSP}}</a></h2>
+                                                <h2 class="product-name"><a href="{{route('sanpham_chitiet', $sp_noibat->idSP)}}" title="{{$sp_noibat->TenSP}}">{{$sp_noibat->TenSP}}</a></h2>
                                                 <div class="price-box">
                                                     @if($sp_noibat->GiaKhuyenMai!=0)
                                                     <p class="special-price price">
@@ -131,25 +131,25 @@
                                             <div class="images-container">
                                                 <div class="product_icon">
                                                     <div class='new-icon'><span>Mới</span></div>
-                                                    @if($sp_noibat->GiaKhuyenMai != 0)
+                                                    @if($sp_moi->GiaKhuyenMai != 0)
                                                     <div class="product_icon">
                                                         <div class="sale-icon"><span>Giảm</span></div>
                                                     </div>
                                                     @endif
                                                 </div>
-                                                <a href="#" title="Nunc facilisis" class="product-image">
-                                                    <img src="public/clientassets/upload/sanpham/{{$sp_moi->urlHinhSP}}" alt="Nunc facilisis" />
+                                                <a href="{{route('sanpham_chitiet', $sp_moi->idSP)}}" title="{{$sp_moi->TenSP}}" class="product-image">
+                                                    <img src="public/clientassets/upload/sanpham/{{$sp_moi->urlHinhSP}}" alt="{{$sp_moi->TenSP}}"/>
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
-                                                        <li><a href="#" class="link-quickview">Xem chi tiết</a></li>
+                                                        <li><a href="{{route('sanpham_chitiet', $sp_moi->idSP)}}" class="link-quickview">Xem chi tiết</a></li>
                                                         <li><a href="#" class="link-wishlist">Yêu thích</a></li>
                                                         <li><a href="#" class="link-cart">Mua hàng</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="des-container">
-                                                <h2 class="product-name"><a href="#" title="Nunc facilisis">{{$sp_moi->TenSP}}</a></h2>
+                                                <h2 class="product-name"><a href="{{route('sanpham_chitiet', $sp_moi->idSP)}}" title="{{$sp_moi->TenSP}}">{{$sp_moi->TenSP}}</a></h2>
                                                 <div class="price-box">
                                                     @if($sp_moi->GiaKhuyenMai!=0)
                                                     <p class="special-price price">
@@ -201,10 +201,10 @@
                                     <div class="products-grid">
                                         <div class="images-container">
 
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="public/clientassets/upload/sanpham/{{$sp_banchay->urlHinhSP}}"></a>
+                                            <a class="product-image" title="{{$sp_banchay->TenSP}}" href="{{route('sanpham_chitiet', $sp_banchay->idSP)}}"><img alt="{{$sp_banchay->TenSP}}" src="public/clientassets/upload/sanpham/{{$sp_banchay->urlHinhSP}}"></a>
                                         </div>
                                         <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">{{$sp_banchay->TenSP}}</a></h2>
+                                            <h2 class="product-name"><a title="{{$sp_banchay->TenSP}}" href="{{route('sanpham_chitiet', $sp_banchay->idSP)}}">{{$sp_banchay->TenSP}}</a></h2>
                                             <div class="price-box">
                                                 @if($sp_banchay->GiaKhuyenMai != 0)
                                                 <p class="special-price price">
@@ -232,10 +232,10 @@
                                     @foreach ($san_pham_giam_gia as $sp_giamgia)
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="public/clientassets/upload/sanpham/{{$sp_giamgia->urlHinhSP}}"></a>
+                                            <a class="product-image" title="{{$sp_giamgia->TenSP}}" href="{{route('sanpham_chitiet', $sp_giamgia->idSP)}}"><img alt="{{$sp_giamgia->TenSP}} " src="public/clientassets/upload/sanpham/{{$sp_giamgia->urlHinhSP}}"></a>
                                         </div>
                                         <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">{{$sp_giamgia->TenSP}} </a></h2>
+                                            <h2 class="product-name"><a title="{{$sp_giamgia->TenSP}}" href="{{route('sanpham_chitiet', $sp_giamgia->idSP)}}">{{$sp_giamgia->TenSP}} </a></h2>
                                             <div class="price-box">
                                                 <p class="special-price price">
                                                     <span class="price">{{number_format($sp_giamgia->GiaKhuyenMai)}}</span>
@@ -256,10 +256,10 @@
                                     @foreach ($phu_kien as $phukien)
                                     <div class="products-grid" style="margin-top: 5px;">
                                         <div class="images-container">
-                                            <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="public/clientassets/upload/sanpham/{{$phukien->urlHinhSP}}"></a>
+                                            <a class="product-image" title="{{$phukien->TenSP}}" href="{{route('sanpham_chitiet', $phukien->idSP)}}"><img alt="{{$phukien->TenSP}}" src="public/clientassets/upload/sanpham/{{$phukien->urlHinhSP}}"></a>
                                         </div>
                                         <div class="des-container">
-                                            <h2 class="product-name"><a title="Accumsan elit " href="#">{{$phukien->TenSP}}</a></h2>
+                                            <h2 class="product-name"><a title="{{$phukien->TenSP}}" href="{{route('sanpham_chitiet', $phukien->idSP)}}">{{$phukien->TenSP}}</a></h2>
                                             <div class="price-box">
                                                 <p class="special-price price">
                                                     <span class="price">{{number_format($phukien->GiaSP)}}</span>
