@@ -19,11 +19,11 @@
                                     <div class="row">
                                         <div class="col-sm-5">
                                             <div class="images-container">
-                                                <a class="product-image" title="Fusce aliquam" href="#" rel="author"><img height="220px" alt="Fusce aliquam" src="public/clientassets/upload/tintuc/{{$tin->urlHinhTin}}"></a>
+                                                <a class="product-image" title="Fusce aliquam" href="{{route('tintuc_chitiet',$tin->idTin)}}" rel="author"><img height="220px" alt="Fusce aliquam" src="public/clientassets/upload/tintuc/{{$tin->urlHinhTin}}"></a>
                                             </div>
                                         </div>
                                         <div class="col-sm-7">
-                                            <h2 class="product-name"><a title="" href="#">{{$tin->TieuDe}}</a></h2>
+                                            <h2 class="product-name"><a title="" href="{{route('tintuc_chitiet',$tin->idTin)}}">{{$tin->TieuDe}}</a></h2>
                                             <div class="blog-attr">
                                                 <span>Post by <a href="#">Admin</a></span>
                                                 <span class="separator">|</span>
@@ -32,7 +32,7 @@
                                             <div class="desc">
                                                {!!$tin->TomTat!!}
                                             </div>
-                                            <a href="#" class="btn btn-default btn-readmore">Xem thêm</a>
+                                            <a href="{{route('tintuc_chitiet',$tin->idTin)}}" class="btn btn-default btn-readmore">Xem thêm</a>
                                         </div>
                                     </div>
                                 </div>

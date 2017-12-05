@@ -50,6 +50,11 @@ Route::get('tintuc',[
     'uses'=> 'PageController@getTinTuc'
 ]);
 
+Route::get('chitiet_tintuc/{tin}',[
+    'as'=>'tintuc_chitiet',
+    'uses'=> 'PageController@getTinTucChiTiet'
+]);
+
 Route::group(['prefix'=>'admin'],function(){
 
     Route::get('/', [

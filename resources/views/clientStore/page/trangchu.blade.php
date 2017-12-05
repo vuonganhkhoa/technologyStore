@@ -340,13 +340,13 @@
 
                             <div style="margin-bottom: 7px" class="col-xs-6">
                                 <div class="image-cat">
-                                    <a href="#/"><img height="200px" alt="Electronic" src="public/clientassets/upload/tintuc/{{$tin->urlHinhTin}}"></a>
+                                    <a href="{{route('tintuc_chitiet',$tin->idTin)}}"><img height="200px" alt="Electronic" src="public/clientassets/upload/tintuc/{{$tin->urlHinhTin}}"></a>
                                 </div>
                             </div>
 
                             <div class="col-xs-6">
-                                <div class="name-cat"><h3>{{$tin->TieuDe}}</h3></div>
-                                <a class="view-more" href="#">Xem thếm</a>
+                                <div class="name-cat"><a href="{{route('tintuc_chitiet',$tin->idTin)}}"><h3>{{$tin->TieuDe}}</h3></a></div>
+                                <a class="view-more" href="{{route('tintuc_chitiet',$tin->idTin)}}">Xem thêm</a>
                             </div>
                         </div>
 
