@@ -28,6 +28,12 @@ class PageController extends Controller
     	return view('clientStore/page/sanpham', compact('sanpham'));
     }
 
+    public function getTinTuc(){
+
+        $tintuc = Tin::all();
+        return view('clientStore/page/tintuc', compact('tintuc'));
+    }
+
     public function getSanPham_HangSX($id_hangSX){
 
         $sanpham_hangsx = SanPham::where([['idHangSX', $id_hangSX],['idLoaiSP',1]])->get();

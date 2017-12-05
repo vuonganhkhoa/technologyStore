@@ -168,7 +168,7 @@
                             <ul class="menu clearfix visible-lg visible-md">
                                 <li><a href="index.php">Trang chủ</a></li>
                                 <li><a href="{{route('san_pham')}}">Sản phẩm</a></li>
-                                <li><a href="blog.html">Tin tức công nghệ</a></li>
+                                <li><a href="{{route('tin_tuc')}}">Tin tức công nghệ</a></li>
                             </ul>
                         </div>
                     </div>
