@@ -46,13 +46,28 @@ Route::get('sanpham_hangsx/{id_HangSX}',[
 ]);
 
 Route::get('tintuc',[
-    'as' => 'tin_tuc',
+    'as'=> 'tin_tuc',
     'uses'=> 'PageController@getTinTuc'
 ]);
 
 Route::get('chitiet_tintuc/{tin}',[
     'as'=>'tintuc_chitiet',
     'uses'=> 'PageController@getTinTucChiTiet'
+]);
+
+Route::get('sanphamoi',[
+    'as'=>'sanpham_moi',
+    'uses'=> 'PageController@getSanPhamMoi'
+]);
+
+Route::get('sanphamkhuyenmai',[
+    'as'=>'sanpham_khuyenmai',
+    'uses'=> 'PageController@getSanPhamKhuyenMai'
+]);
+
+Route::get('sanphambanchay',[
+    'as'=>'sanpham_banchay',
+    'uses'=> 'PageController@getSanPhamKhuyenMai'
 ]);
 
 Route::group(['prefix'=>'admin'],function(){

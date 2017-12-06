@@ -46,4 +46,16 @@ class PageController extends Controller
         $hangsanxuat = HangSanXuat::where('idHangSX', $id_hangSX)->first();
         return view('clientStore/page/sanpham_theoHangSX', compact('sanpham_hangsx', 'hangsanxuat'));
     }
+
+    public function getSanPhamMoi(){
+
+        $sanphammoi = SanPham::where('SanPhamMoi',1)->get();
+        return view('clientStore/page/sanpham_moi', compact('sanphammoi'));
+    }
+
+    public function getSanPhamKhuyenMai(){
+
+        $sanphamkhuyenmai = SanPham::where('GiaKhuyenMai','<>',0)->get();
+        return view('clientStore/page/sanpham_khuyenmai', compact('sanphamkhuyenmai'));
+    }
 }

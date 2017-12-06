@@ -154,9 +154,9 @@
                                                 <a href="#">Máy tính bảng</a>
                                             </li>
                                                
-                                            <li class="nosub"><a href="#">Sản phẩm mới</a></li>
+                                            <li class="nosub"><a href="{{route('sanpham_moi')}}">Sản phẩm mới</a></li>
                                             <li class="nosub"><a href="#">Sản phẩm bán chạy</a></li>
-                                            <li class="nosub"><a href="#">Sản phẩm khuyến mãi</a></li> 
+                                            <li class="nosub"><a href="{{route('sanpham_khuyenmai')}}">Sản phẩm khuyến mãi</a></li> 
                                             <li class="nosub"><a href="#">Phụ kiện khác</a></li> 
 
                                         </ul>
