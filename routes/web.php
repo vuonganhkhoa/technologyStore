@@ -97,7 +97,7 @@ Route::post('dangnhap','KhachHangController@postLogin');
 Route::get('dangxuat','KhachHangController@getLogout');
 
 Route::get('tintuc',[
-    'as' => 'tin_tuc',
+    'as'=> 'tin_tuc',
     'uses'=> 'PageController@getTinTuc'
 ]);
 
@@ -105,6 +105,26 @@ Route::get('tintuc',[
 Route::get('chitiet_tintuc/{tin}',[
     'as'=>'tintuc_chitiet',
     'uses'=> 'PageController@getTinTucChiTiet'
+]);
+
+Route::get('sanphamoi',[
+    'as'=>'sanpham_moi',
+    'uses'=> 'PageController@getSanPhamMoi'
+]);
+
+Route::get('sanphamkhuyenmai',[
+    'as'=>'sanpham_khuyenmai',
+    'uses'=> 'PageController@getSanPhamKhuyenMai'
+]);
+
+Route::get('sanphambanchay',[
+    'as'=>'sanpham_banchay',
+    'uses'=> 'PageController@getSanPhamBanChay'
+]);
+
+Route::get('maytinhbang',[
+    'as'=>'maytinhbang',
+    'uses'=> 'PageController@getMayTinhBang'
 ]);
 
 Route::group(['prefix'=>'admin'],function(){
