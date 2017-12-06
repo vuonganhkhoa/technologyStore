@@ -19,11 +19,11 @@
                             <a href="#"><img alt="" src="images/ads/ads-17.jpg"></a>
                         </div>
                         <div class="page-title">
-                            <h1>Sản phẩm khuyến mãi</h1>
+                            <h1>Sản phẩm bán chạy</h1>
                         </div>
 
                         <div class="row products">
-                            @foreach($sanphamkhuyenmai as $sp)
+                            @foreach($sanphambanchay as $sp)
                             <div class="col-md-3 col-sm-6">
                                 <div class='productslider-item item'>
                                     <div class="item-inner">

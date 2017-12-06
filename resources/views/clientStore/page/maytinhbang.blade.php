@@ -8,7 +8,6 @@
         font-weight: bold !important;
     }
 </style>
-
 <div class="main">
             <div class="container">
                 <div class="row">
@@ -19,25 +18,17 @@
                             <a href="#"><img alt="" src="images/ads/ads-17.jpg"></a>
                         </div>
                         <div class="page-title">
-                            <h1>Sản phẩm khuyến mãi</h1>
+                            <h1>Máy tính bảng</h1>
                         </div>
 
                         <div class="row products">
-                            @foreach($sanphamkhuyenmai as $sp)
+                            @foreach($maytinhbang as $sp)
                             <div class="col-md-3 col-sm-6">
                                 <div class='productslider-item item'>
                                     <div class="item-inner">
                                         <div class="images-container">
                                             <div class="product_icon">
-
-                                                @if($sp->SanPhamMoi==1)
-                                                <div class='new-icon'><span>Mới</span></div>
-                                                @endif
-
-                                                @if($sp->GiaKhuyenMai >0)
-                                                <div class="sale-icon"><span>Giảm</span></div>
-                                                @endif
-
+                                                <div class='new-icon'><span>new</span></div>
                                             </div>
                                             <a href="#" title="Nunc facilisis" class="product-image">
                                                 <img height="250px" src="public/clientassets/upload/sanpham/{{$sp->urlHinhSP}}" alt="Nunc facilisis" />
