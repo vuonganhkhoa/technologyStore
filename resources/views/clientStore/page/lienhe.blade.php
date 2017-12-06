@@ -3,7 +3,7 @@
 @section('content')
 <div class="main">
         	<div class="container">
-            	<div class="row">
+            	<div class="row" style="margin-top: 20px;">
                 	<div class="col-sm-9">
                     	<div class="page-title page-title-line">
                         	<div class="col-md-4"></div>

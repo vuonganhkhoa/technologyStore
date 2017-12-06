@@ -14,7 +14,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        view()->composer(['clientStore.layout.header', 'clientStore.layout.footer'] , function($view){
+
         view()->composer(['clientStore.layout.header', 'clientStore.layout.footer', 'clientStore.layout.master', 'clientStore.page.thanhtoan'] , function($view){
+
             $hangsanxuat = HangSanXuat::all();
             // $total = Cart::subtotal(0,',','.');
             // $content = Cart::content();

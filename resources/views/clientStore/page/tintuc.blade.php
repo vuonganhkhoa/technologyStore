@@ -23,7 +23,11 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-7">
+
+                                            <h2 class="product-name"><a title="" href="{{route('tintuc_chitiet', $tin->idTin)}}">{{$tin->TieuDe}}</a></h2>
+
                                             <h2 class="product-name"><a title="" href="{{route('tintuc_chitiet',$tin->idTin)}}">{{$tin->TieuDe}}</a></h2>
+
                                             <div class="blog-attr">
                                                 <span>Post by <a href="#">Admin</a></span>
                                                 <span class="separator">|</span>
