@@ -46,7 +46,7 @@
                                             <div class="box-hover">
                                                 <ul class="add-to-links">
                                                     <li><a href="{{ route('sanpham_chitiet', $sp->idSP) }}" class="link-quickview">Xem chi tiết</a></li>
-
+                                           
                                                     <li><a href="{{ route('muahang', $sp->idSP) }}" class="link-cart">Mua hàng</a></li>
                                                 </ul>
                                             </div>

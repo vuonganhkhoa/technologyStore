@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\HangSanXuat;
+use Cart;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,10 +15,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('clientStore.layout.header' , function($view){
+        view()->composer(['clientStore.layout.header', 'clientStore.layout.footer', 'clientStore.layout.master', 'clientStore.page.thanhtoan'] , function($view){
             $hangsanxuat = HangSanXuat::all();
-            $view->with('hangsanxuat',$hangsanxuat);
+            $total = Cart::subtotal(0,',','.');
+            $content = Cart::content();
+            $count = Cart::count();
+            
+            $view->with(['hangsanxuat'=>$hangsanxuat,'total'=>$total,'content'=>$content,'count'=>$count]);
         });
+
     }
 
     /**

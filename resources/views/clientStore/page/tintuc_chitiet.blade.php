@@ -21,7 +21,7 @@
                     @foreach ($tintuc as $tin)
                 	<div class="col-sm-7">
                     	<div class="blog-detail blog-list">
-                        	<div class="blog-image"><img src="public/clientassets/upload/tintuc/{{$tin->urlHinhTin}}" class="img-responsive" alt=""></div>
+                        	<div class="blog-image"><img src="clientassets/upload/tintuc/{{$tin->urlHinhTin}}" class="img-responsive" alt=""></div>
 
                             <div class="item">
                                 <div class="item-inner">

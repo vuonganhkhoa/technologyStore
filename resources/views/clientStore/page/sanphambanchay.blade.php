@@ -41,12 +41,12 @@
                                                 @endif
 
                                             <a href="{{ route('sanpham_chitiet', $sp->idSP) }}" title="Nunc facilisis" class="product-image">
-                                                <img src="clientassets/upload/sanpham/{{$sp->urlHinhSP}}" alt="Nunc facilisis" height="250px"/>
+                                                <img src="clientassets/upload/sanpham/{{$sp->urlHinhSP}}" alt="Nunc facilisis" height="250px" />
                                             </a>
                                             <div class="box-hover">
                                                 <ul class="add-to-links">
                                                     <li><a href="{{ route('sanpham_chitiet', $sp->idSP) }}" class="link-quickview">Xem chi tiết</a></li>
-
+                                                    
                                                     <li><a href="{{ route('muahang', $sp->idSP) }}" class="link-cart">Mua hàng</a></li>
                                                 </ul>
                                             </div>
