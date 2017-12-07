@@ -15,13 +15,28 @@
                         <div class="flexslider ma-nivoslider">
                             <div class="ma-loading"></div>
                             <div id="ma-inivoslider-banner7" class="slides">
+<<<<<<< HEAD
+                                <img src="clientassets/assets/images/slider/slide-01.jpg" class="dn" alt="" title="#banner7-caption1" height ="400px"/>                           
+                                <img src="clientassets/assets/images/slider/slide-02.jpg" class="dn" alt="" title="#banner7-caption2" height ="400px"/>
+                                <img src="clientassets/assets/images/slider/slide-03.jpg" class="dn" alt="" title="#banner7-caption3" height ="400px"/>
+=======
                                 <img src="images/slider/slide-01.jpg" class="dn" alt="" title="#banner7-caption1"  />                           
                                 <img src="images/slider/slide-02.jpg" class="dn" alt="" title="#banner7-caption2"  />
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                             </div>
                             <div id="banner7-caption1" class="banner7-caption nivo-html-caption nivo-caption">
                                 <div class="timethai"></div>
                                 <div class="banner7-content slider-1">
                                     <div class="title-container">
+<<<<<<< HEAD
+                                        <h1 class="title1">Samsung Galaxy S8</h1>
+                                        <h2 class="title2" >Thiết kế không phiền màn hình</h2>                                          
+                                    </div>                                                                                             
+                                    <img class="img1" src="clientassets/assets/images/slider/img-04.png" alt="" height ="280px" />    
+                                </div> 
+
+                            </div>                    
+=======
                                         <h1 class="title1">headphones az12</h1>
                                         <h2 class="title2" >Typi non habent claritatem insitam; est usus legentis</h2>                                          
                                     </div>
@@ -40,6 +55,7 @@
                                     <img class="img1" src="images/slider/img-04.png" alt="" />                                                                              
                                 </div>
                             </div>                      
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                             <div id="banner7-caption2" class="banner7-caption nivo-html-caption nivo-caption">
                                 <div class="timethai"></div>
                                 <div class="banner7-content slider-2">
@@ -99,6 +115,24 @@
                                                     <div class="sale-icon"><span>Giảm</span></div>
                                                 </div>
                                                 @endif
+<<<<<<< HEAD
+                                                <a href="{{route('sanpham_chitiet', $sp_noibat->idSP)}}" title="{{$sp_noibat->TenSP}}" class="product-image">
+                                                    <img src="clientassets/upload/sanpham/{{$sp_noibat->urlHinhSP}}" alt="{{$sp_noibat->TenSP}}" />
+                                                </a>
+                                                <div class="box-hover">
+                                                    <ul class="add-to-links">
+                                                        <li><a href="{{route('sanpham_chitiet', $sp_noibat->idSP)}}" class="link-quickview">Chi tiết</a></li>
+                                                        <li><a href="{{ route('muahang', $sp_noibat->idSP) }}" class="link-cart">Mua hàng</a></li>
+=======
+
+                                                <a href="{{route('sanpham_chitiet', $sp_noibat->idSP)}}" title="{{$sp_noibat->TenSP}}" class="product-image">
+                                                    <img src="public/clientassets/upload/sanpham/{{$sp_noibat->urlHinhSP}}" alt="{{$sp_noibat->TenSP}}" />
+                                                </a>
+                                                <div class="box-hover">
+                                                    <ul class="add-to-links">
+                                                        <li><a href="{{route('sanpham_chitiet', $sp_noibat->idSP)}}" class="link-quickview">Chi tiết</a></li>
+                                                        <li><a href="#" class="link-wishlist">Yêu thích</a></li>
+
 
                                                 <a href="#" title="Nunc facilisis" class="product-image">
                                                     <img src="public/clientassets/upload/sanpham/{{$sp->urlHinhSP}}" alt="Nunc facilisis" />
@@ -106,14 +140,24 @@
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
                                                         <li><a href="#" class="link-quickview">Chi tiết</a></li>
+
                                                         <li><a href="#" class="link-cart">Mua hàng</a></li>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="des-container">
+<<<<<<< HEAD
+                                                <h2 class="product-name"><a href="{{route('sanpham_chitiet', $sp_noibat->idSP)}}" title="{{$sp_noibat->TenSP}}">{{$sp_noibat->TenSP}}</a></h2>
+=======
+
+                                                <h2 class="product-name"><a href="{{route('sanpham_chitiet', $sp_noibat->idSP)}}" title="{{$sp_noibat->TenSP}}">{{$sp_noibat->TenSP}}</a></h2>
+
                                                 <h2 class="product-name"><a href="#" title="Nunc facilisis">{{$sp->TenSP}}</a></h2>
                                                 
                                                 @if($sp->GiaKhuyenMai>0)
+
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                                 <div class="price-box">
                                                     <p class="special-price">
                                                         <span class="price-label">Giá KM</span>
@@ -147,6 +191,13 @@
                             <a href="#"><img alt="" src="images/ads/ads-05.jpg"></a>
                         </div>
 
+<<<<<<< HEAD
+                        <!-- /.featuredproductslider-container -->
+                        <!-- <div class="banner">
+                            <a href="#"><img alt="" src="clientassets/assets/images/ads/ads-05.jpg" height="100px"></a>
+                        </div>  -->
+=======
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
 
                         <!--Sản Phẩm Mới-->
                         <div class="newproductslider-container"> 
@@ -161,6 +212,22 @@
                                                 @if($sp->SanPhamMoi == 1 )
                                                 <div class="product_icon">
                                                     <div class='new-icon'><span>Mới</span></div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
+                                                    @if($sp_moi->GiaKhuyenMai != 0)
+                                                    <div class="product_icon">
+                                                        <div class="sale-icon"><span>Giảm</span></div>
+                                                    </div>
+                                                    @endif
+                                                </div>
+                                                <a href="{{route('sanpham_chitiet', $sp_moi->idSP)}}" title="{{$sp_moi->TenSP}}" class="product-image">
+<<<<<<< HEAD
+                                                    <img src="clientassets/upload/sanpham/{{$sp_moi->urlHinhSP}}" alt="{{$sp_moi->TenSP}}"/>
+=======
+                                                    <img src="public/clientassets/upload/sanpham/{{$sp_moi->urlHinhSP}}" alt="{{$sp_moi->TenSP}}"/>
+
                                                 </div>
                                                 @endif
 
@@ -172,18 +239,37 @@
 
                                                 <a href="#" title="Nunc facilisis" class="product-image">
                                                     <img src="public/clientassets/upload/sanpham/{{$sp->urlHinhSP}}" alt="Nunc facilisis" />
+
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                                 </a>
 
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
+<<<<<<< HEAD
+                                                        <li><a href="{{route('sanpham_chitiet', $sp_moi->idSP)}}" class="link-quickview">Xem chi tiết</a></li>
+                                                        <li><a href="{{ route('muahang', $sp_moi->idSP) }}" class="link-cart">Mua hàng</a></li>
+=======
+
+                                                        <li><a href="{{route('sanpham_chitiet', $sp_moi->idSP)}}" class="link-quickview">Xem chi tiết</a></li>
+                                                        <li><a href="#" class="link-wishlist">Yêu thích</a></li>
+
                                                         <li><a href="#" class="link-quickview">Chi tiết</a></li>
                                                         <li><a href="#" class="link-cart">Mua hàng</a></li>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="des-container">
+<<<<<<< HEAD
+                                                <h2 class="product-name"><a href="{{route('sanpham_chitiet', $sp_moi->idSP)}}" title="{{$sp_moi->TenSP}}">{{$sp_moi->TenSP}}</a></h2>
+=======
+
+                                                <h2 class="product-name"><a href="{{route('sanpham_chitiet', $sp_moi->idSP)}}" title="{{$sp_moi->TenSP}}">{{$sp_moi->TenSP}}</a></h2>
+
                                                 <h2 class="product-name"><a href="#" title="Nunc facilisis">{{$sp->TenSP}}</a></h2>
 
+
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                                 <div class="price-box">
                                                     <p class="price">
                                                         <span class="price-label">Giá :</span>
@@ -203,12 +289,20 @@
                         <div class="row">
                             <div class="col-smc-7">
                                 <div class="banner">
+<<<<<<< HEAD
+                                    <a href="#"><img alt="" src="clientassets/assets/images/ads/ads-05.jpg" height="300px"></a>
+=======
                                     <a href="#"><img alt="" src="images/ads/ads-06.jpg"></a>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                 </div>
                             </div>
                             <div class="col-smc-5">
                                 <div class="banner">
+<<<<<<< HEAD
+                                    <a href="#"><img alt="" src="clientassets/assets/images/ads/ads-04.jpg" height="300px"></a>
+=======
                                     <a href="#"><img alt="" src="images/ads/ads-07.jpg"></a>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                 </div>
                             </div>
                         </div>
@@ -222,6 +316,19 @@
                                     @foreach($sanphamkhuyenmai as $sp)
                                     <div class="products-grid">
                                         <div class="images-container">
+
+<<<<<<< HEAD
+                                            <a class="product-image" title="{{$sp_banchay->TenSP}}" href="{{route('sanpham_chitiet', $sp_banchay->idSP)}}"><img alt="{{$sp_banchay->TenSP}}" src="clientassets/upload/sanpham/{{$sp_banchay->urlHinhSP}}"></a>
+                                        </div>
+                                        <div class="des-container">
+                                            <h2 class="product-name"><a title="{{$sp_banchay->TenSP}}" href="{{route('sanpham_chitiet', $sp_banchay->idSP)}}">{{$sp_banchay->TenSP}}</a></h2>
+=======
+
+                                            <a class="product-image" title="{{$sp_banchay->TenSP}}" href="{{route('sanpham_chitiet', $sp_banchay->idSP)}}"><img alt="{{$sp_banchay->TenSP}}" src="public/clientassets/upload/sanpham/{{$sp_banchay->urlHinhSP}}"></a>
+                                        </div>
+                                        <div class="des-container">
+                                            <h2 class="product-name"><a title="{{$sp_banchay->TenSP}}" href="{{route('sanpham_chitiet', $sp_banchay->idSP)}}">{{$sp_banchay->TenSP}}</a></h2>
+
                                         
                                             <div class="product_icon">
                                                 <div class="sale-icon"><span>Giảm</span></div>
@@ -232,6 +339,7 @@
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">{{$sp->TenSP}} </a></h2>
 
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                             <div class="price-box">
                                                 <p class="special-price">
                                                     <span class="price">{{number_format($sp->GiaKhuyenMai)}}VND</span>
@@ -253,12 +361,25 @@
                                     @foreach($sanphambanchay as $sp)
                                     <div class="products-grid">
                                         <div class="images-container">
+<<<<<<< HEAD
+                                            <a class="product-image" title="{{$sp_giamgia->TenSP}}" href="{{route('sanpham_chitiet', $sp_giamgia->idSP)}}"><img alt="{{$sp_giamgia->TenSP}} " src="clientassets/upload/sanpham/{{$sp_giamgia->urlHinhSP}}"></a>
+                                        </div>
+                                        <div class="des-container">
+                                            <h2 class="product-name"><a title="{{$sp_giamgia->TenSP}}" href="{{route('sanpham_chitiet', $sp_giamgia->idSP)}}">{{$sp_giamgia->TenSP}} </a></h2>
+=======
+
+                                            <a class="product-image" title="{{$sp_giamgia->TenSP}}" href="{{route('sanpham_chitiet', $sp_giamgia->idSP)}}"><img alt="{{$sp_giamgia->TenSP}} " src="public/clientassets/upload/sanpham/{{$sp_giamgia->urlHinhSP}}"></a>
+                                        </div>
+                                        <div class="des-container">
+                                            <h2 class="product-name"><a title="{{$sp_giamgia->TenSP}}" href="{{route('sanpham_chitiet', $sp_giamgia->idSP)}}">{{$sp_giamgia->TenSP}} </a></h2>
+
                                             <a class="product-image" title="Accumsan elit " href="#"><img alt="Accumsan elit " src="public/clientassets/upload/sanpham/{{$sp->urlHinhSP}}"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">{{$sp->TenSP}}</a></h2>
 
                                             @if($sp->GiaKhuyenMai != 0)
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                             <div class="price-box">
                                                 <p class="special-price">
                                                     <span class="price">{{number_format($sp->GiaKhuyenMai)}}</span>
@@ -290,12 +411,25 @@
                                     @foreach($phukien as $pk)
                                     <div class="products-grid">
                                         <div class="images-container">
+<<<<<<< HEAD
+                                            <a class="product-image" title="{{$phukien->TenSP}}" href="{{route('sanpham_chitiet', $phukien->idSP)}}"><img alt="{{$phukien->TenSP}}" src="clientassets/upload/sanpham/{{$phukien->urlHinhSP}}"></a>
+                                        </div>
+                                        <div class="des-container">
+                                            <h2 class="product-name"><a title="{{$phukien->TenSP}}" href="{{route('sanpham_chitiet', $phukien->idSP)}}">{{$phukien->TenSP}}</a></h2>
+=======
+
+                                            <a class="product-image" title="{{$phukien->TenSP}}" href="{{route('sanpham_chitiet', $phukien->idSP)}}"><img alt="{{$phukien->TenSP}}" src="public/clientassets/upload/sanpham/{{$phukien->urlHinhSP}}"></a>
+                                        </div>
+                                        <div class="des-container">
+                                            <h2 class="product-name"><a title="{{$phukien->TenSP}}" href="{{route('sanpham_chitiet', $phukien->idSP)}}">{{$phukien->TenSP}}</a></h2>
+
                                             <a class="product-image" title="Accumsan elit " href="#"><img height="100px" alt="Accumsan elit " src="public/clientassets/upload/sanpham/{{$pk->urlHinhSP}}"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="Accumsan elit " href="#">{{$pk->TenSP}} </a></h2>
                                             
                                             @if($sp->GiaKhuyenMai != 0)
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                             <div class="price-box">
                                                 <p class="special-price">
                                                     <span class="price">{{number_format($pk->GiaKhuyenMai)}}VND</span>
@@ -305,6 +439,7 @@
                                                 </p>
                                             </div>
                                             @else
+
                                             <div class="price-box">
                                                 <p class="price">
                                                     <span class="price">{{number_format($pk->GiaSP)}}VND</span>
@@ -332,15 +467,27 @@
                 </div> 
                 <div class="row">
 
+<<<<<<< HEAD
+                    <?php $dem=1; ?>
+                    @foreach ($tin_tuc as $tin)
+                    
+                    <?php if($dem==1){ echo "<div class='row'>";} ?>
+                    <div class="col-md-6 col-sm-6" style="margin-bottom: 10px;">
+=======
 
                     @foreach($tintuc as $tin)
                   
                     <div class="col-md-6 col-sm-6">
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                         <div class="row">
 
                             <div style="margin-bottom: 7px" class="col-xs-6">
                                 <div class="image-cat">
+<<<<<<< HEAD
+                                    <a href="{{route('tintuc_chitiet', $tin->idTin)}}"><img alt="Electronic" src="clientassets/upload/tintuc/{{$tin->urlHinhTin}}" height="200px"></a>
+=======
                                     <a href="{{route('tintuc_chitiet',$tin->idTin)}}"><img height="200px" alt="Electronic" src="public/clientassets/upload/tintuc/{{$tin->urlHinhTin}}"></a>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                 </div>
                             </div>
 
@@ -353,7 +500,32 @@
                     </div>
                     
                     @endforeach
+<<<<<<< HEAD
+                   
+                    <!-- <div class="col-md-3 col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="image-cat">
+                                    <a href="#/"><img alt="Electronic" src="clientassets/assets/images/products/img-07.jpg"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="name-cat"><h3>Smartphones &amp; tablets</h3></div>
+                                <a class="view-more" href="#">Xem thêm</a>
+                            </div>
+                        </div>
+                        <div class="list-cat">
+                            <ul>
+                                <li><a href="#">Accessories for iPhone</a></li>
+                                <li><a href="#">Accessories for iPad</a></li>
+                                <li><a href="#">Accessories for Tablet PC</a></li>
+                                <li><a href="#">Tablet PC</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+=======
 
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                 </div>
             </div>
         </div><!-- /.catlist -->

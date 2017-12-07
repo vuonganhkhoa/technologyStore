@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
+use Cart;
 use App\SanPham;
 
 class AjaxController extends Controller
@@ -39,5 +40,14 @@ class AjaxController extends Controller
 	        
 	    }
       
+    }
+
+    public function getCapNhat(){
+        if(Request::ajax()){
+            $id = Request::get('id');
+            $qty = Request::get('qty');
+            Cart::update($id, $qty);
+            echo 'true';
+        }
     }
 }

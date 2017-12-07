@@ -76,10 +76,17 @@ class SanPhamController extends Controller
         }
         $name = $file->getClientOriginalName();  //lấy tên hình nguyên bản
         $hinh = str_random(4)."_".$name;  //tên hình khi save lại : "4 ký tự random" + "_" + name nguyên bản
+<<<<<<< HEAD
+        while (file_exists("clientassets/upload/sanpham/".$hinh)) {  //ktra đã tồn tại hình có tên tương tự chưa
+          $hinh = str_random(4)."_".$name;    //thì random tiếp
+        }
+        $file->move("clientassets/upload/sanpham/",$hinh);  // move hình đã upload vào folder upload
+=======
         while (file_exists("public/adminassets/upload/sanpham".$hinh)) {  //ktra đã tồn tại hình có tên tương tự chưa
           $hinh = str_random(4)."_".$name;    //thì random tiếp
         }
         $file->move("public/adminassets/upload/sanpham",$hinh);  // move hình đã upload vào folder upload
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
         $sanpham->urlHinhSP = $hinh;
       }
       else {
