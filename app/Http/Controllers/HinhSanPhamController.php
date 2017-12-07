@@ -40,10 +40,17 @@ class HinhSanPhamController extends Controller
         }
         $name = $file->getClientOriginalName();  //lấy tên hình nguyên bản
         $hinh = str_random(4)."_".$name;  //tên hình khi save lại : "4 ký tự random" + "_" + name nguyên bản
+<<<<<<< HEAD
+        while (file_exists("clientassets/upload/sanpham/".$hinh)) {  //ktra đã tồn tại hình có tên tương tự chưa
+          $hinh = str_random(4)."_".$name;    //thì random tiếp
+        }
+        $file->move("clientassets/upload/sanpham/",$hinh);  // move hình đã upload vào folder upload
+=======
         while (file_exists("public/adminassets/upload/sanpham".$hinh)) {  //ktra đã tồn tại hình có tên tương tự chưa
           $hinh = str_random(4)."_".$name;    //thì random tiếp
         }
         $file->move("public/adminassets/upload/sanpham",$hinh);  // move hình đã upload vào folder upload
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
         $hinhsanpham->TenHinh = $hinh;
       }
       else {
@@ -74,6 +81,25 @@ class HinhSanPhamController extends Controller
     	$hinhsanpham = HinhSanPham::find($idHinh);
         $hinhsanpham->idSP = $request->SanPham;
 
+<<<<<<< HEAD
+      //   if ($request->hasFile('hinh')) {  //ktra có up hình or not
+      //   $file = $request->file('hinh');
+      //   $duoi = $file->getClientOriginalExtension();  //lấy đuôi file
+      //   if($duoi != 'jpg' && $duoi != 'png' && $duoi != 'jpeg'){
+      //     return redirect('admin/hinhsanpham/them')->with('loi',' Chỉ được chọn file có phần mở rộng là jpg, jpeg, png');
+      //   }
+      //   $name = $file->getClientOriginalName();  //lấy tên hình nguyên bản
+      //   $hinh = str_random(4)."_".$name;  //tên hình khi save lại : "4 ký tự random" + "_" + name nguyên bản
+      //   while (file_exists("public/clientassets/upload/sanpham/".$hinh)) {  //ktra đã tồn tại hình có tên tương tự chưa
+      //     $hinh = str_random(4)."_".$name;    //thì random tiếp
+      //   }
+      //   $file->move("public/clientassets/upload/sanpham/",$hinh);  // move hình đã upload vào folder upload
+      //   $hinhsanpham->TenHinh = $hinh;
+      // }
+      // else {
+      //   $hinhsanpham->TenHinh = "";
+      // }
+=======
         if ($request->hasFile('hinh')) {  //ktra có up hình or not
         $file = $request->file('hinh');
         $duoi = $file->getClientOriginalExtension();  //lấy đuôi file
@@ -91,6 +117,7 @@ class HinhSanPhamController extends Controller
       else {
         $hinhsanpham->TenHinh = "";
       }
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
 
       $hinhsanpham->save();
       

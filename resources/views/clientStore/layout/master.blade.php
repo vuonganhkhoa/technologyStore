@@ -10,6 +10,14 @@
     <link rel="shortcut icon" href="#">
 
     <title>TechnologyStore</title>
+<<<<<<< HEAD
+    <link href="clientassets/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="clientassets/assets/css/nivo-slider.css" rel="stylesheet">
+    <link href="clientassets/assets/css/animate.css" rel="stylesheet">
+    <link href="clientassets/assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="clientassets/assets/css/style.css" rel="stylesheet">
+    <link href="clientassets/assets/css/responsive.css" rel="stylesheet">
+=======
     <base href="{{asset('/')}}">
     <link href="public/clientassets/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/clientassets/assets/css/nivo-slider.css" rel="stylesheet">
@@ -17,13 +25,14 @@
     <link href="public/clientassets/assets/css/owl.carousel.css" rel="stylesheet">
     <link href="public/clientassets/assets/css/style.css" rel="stylesheet">
     <link href="public/clientassets/assets/css/responsive.css" rel="stylesheet">
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.public/clientassets/assets/js/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.clientassets/assets/js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
   <body>
@@ -31,14 +40,41 @@
         @include('clientStore.layout.header')
         
         @yield('content')
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                
+                <p>Bạn đã thêm <strong class="themgiohang">@foreach($content as $sp){{$sp->name. ' ' }}@endforeach</strong> vào giỏ hàng.</p>
+                
+                <p><a href="{{route('giohang')}}">Xem giỏ hàng</a></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Đóng</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
         
         @include('clientStore.layout.footer')
         
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="public/clientassets/assets/js/bootstrap.min.js"></script>
-        <script src="public/clientassets/assets/js/jquery.nivo.slider.pack.js"></script>
-        <script src="public/clientassets/assets/js/owl.carousel.min.js"></script>
-        <script src="public/clientassets/assets/js/main.js"></script>
+        <script src="clientassets/assets/js/bootstrap.min.js"></script>
+        <script src="clientassets/assets/js/jquery.nivo.slider.pack.js"></script>
+        <script src="clientassets/assets/js/owl.carousel.min.js"></script>
+        <script src="clientassets/assets/js/cloud-zoom.js"></script>
+        <script src="clientassets/assets/js/main.js"></script>
+
+        @if(!empty(Session::get('error')) && Session::get('error') == 5)
+        <script>
+            $(function() {
+                $('#myModal').modal('show');
+            });
+        </script>
+        @endif
+
+        <script type="text/javascript" src="clientassets/assets/js/my.js"></script>
         <script type="text/javascript">
             /* Main Slideshow */
             $(window).load(function() {
@@ -216,6 +252,9 @@
             
             var iid3 = "countbox_3";
             CountBack_slider(gsecs3,"countbox_3", 3);
+        </script>
+        <script type="text/javascript">
+            $("div.alert").delay(5000).slideUp();
         </script>
   </body>
 </html>
