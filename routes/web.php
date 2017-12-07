@@ -218,12 +218,7 @@ Route::get('sanphamkhuyenmai',[
 
 Route::get('sanphambanchay',[
     'as'=>'sanpham_banchay',
-    'uses'=> 'PageController@getSanPhamBanChay'
-]);
-
-Route::get('maytinhbang',[
-    'as'=>'maytinhbang',
-    'uses'=> 'PageController@getMayTinhBang'
+    'uses'=> 'PageController@getSanPhamKhuyenMai'
 ]);
 
 Route::group(['prefix'=>'admin'],function(){

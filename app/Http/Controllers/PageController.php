@@ -319,16 +319,4 @@ class PageController extends Controller
         $sanphamkhuyenmai = SanPham::where('GiaKhuyenMai','<>',0)->get();
         return view('clientStore/page/sanpham_khuyenmai', compact('sanphamkhuyenmai'));
     }
-
-    public function getSanPhamBanChay(){
-
-        $sanphambanchay = SanPham::orderBy('SoLanMua', 'Desc')->get();
-        return view('clientStore/page/sanpham_banchay', compact('sanphambanchay'));
-    }
-
-    public function getMayTinhBang(){
-
-        $maytinhbang = SanPham::where('idLoaiSP', 2)->get();
-        return view('clientStore/page/maytinhbang', compact('maytinhbang'));
-    }
 }
