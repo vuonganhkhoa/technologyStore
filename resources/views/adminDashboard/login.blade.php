@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="public/adminassets/assets/css/styleLogin.css">
+  <link rel="stylesheet" href="adminassets/assets/css/styleLogin.css">
 
   
 </head>
@@ -16,7 +16,7 @@
   
 <!-- Mixins-->
 <!-- Pen Title-->
-<div class="rerun"><a href=""><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
+<div class="rerun"><a href="./"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
 <div class="container">
       @if (count($errors) > 0)
       <div class="alert alert-danger">
@@ -55,7 +55,7 @@
       <div class="footer"><a href="#">Quên mật khẩu?</a></div>
     </form>
   </div>
-  <div class="card alt">
+  <!-- <div class="card alt">
     <div class="toggle"></div>
     <h1 class="title">Đăng kí
       <div class="close"></div>
@@ -80,9 +80,9 @@
         <button><span>Đăng kí</span></button>
       </div>
     </form>
-  </div>
+  </div> -->
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script  src="public/adminassets/assets/js/indexLogin.js"></script>
+  <script  src="adminassets/assets/js/indexLogin.js"></script>
 </body>
 </html>

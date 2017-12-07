@@ -12,6 +12,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
+<<<<<<< HEAD
+                    </div><!-- /sidebar -->
+
+                    @foreach ($tintuc as $tin)
+                	<div class="col-sm-7">
+                    	<div class="blog-detail blog-list">
+                        	<div class="blog-image"><img src="clientassets/upload/tintuc/{{$tin->urlHinhTin}}" class="img-responsive" alt=""></div>
+=======
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
 
                     </div><!-- /sidebar -->
                     <div class="col-sm-9">

@@ -9,7 +9,9 @@
                         	<div class="col-md-4"></div>
                             <div class="col-md-8"><h1>Liên hệ</h1></div>
                         </div>
-                        <form>
+
+                        <form action="{{ route('postLienhe') }}" method="POST">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="row">
 	                        <div class="col-md-4"></div>
@@ -18,25 +20,25 @@
 	                            <div class="col-sm-6">
 	                                <div class="form-group">
 	                                	<label>Họ tên*</label>
-	                                	<input type="text" class="form-control">
+	                                	<input type="text" class="form-control" required name="hoten">
 	                                </div>
 	                            </div>
 	                            <div class="col-sm-6">
 	                                <div class="form-group">
-	                                	<label>Email</label>
-	                                	<input type="email" class="form-control">
+	                                	<label>Email*</label>
+	                                	<input type="email" class="form-control" name="email">
 	                                </div>
 	                            </div>
 	                            <div class="col-sm-12">
 	                                <div class="form-group">
 	                                	<label>Tiêu đề*</label>
-	                                	<input type="text" class="form-control">
+	                                	<input type="text" class="form-control" required>
 	                                </div>
 	                            </div>
 	                            <div class="col-sm-12">
 	                            	<div class="form-group">
 	                                	<label>Nội dung*</label>
-	                                	<textarea class="form-control" rows="7"></textarea>
+	                                	<textarea class="form-control" rows="7" required name="message"></textarea>
 	                                </div>
 	                            </div>
 	                        	</div>
@@ -45,6 +47,7 @@
                         </div>
                          
                         </form>
+
                         <br>
                     </div>
                     <div class="col-sm-3">
@@ -60,7 +63,7 @@
                             		<p>0906482639</p>
                             	</div>
                             	<div class="address add">Địa chỉ: 
-                            		<p>80 Cao Lỗ, Q8, Thành phố Hồ Chí Minh</p>
+                            		<p>180 Cao Lỗ, Q8, Thành phố Hồ Chí Minh</p>
                             	</div>
                            	</div>
                         </div>
