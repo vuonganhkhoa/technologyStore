@@ -97,10 +97,10 @@
                             </div>
                             <div class="footer-content">
                                 <ul>
-                                    <li><a href="#">Cửa hàng chúng tôi</a></li>
-                                    <li><a href="#">Chính sách bảo hành</a></li>
-                                    <li><a href="#">Chính sách trả góp</a></li>
-                                    <li><a href="#">Chính sách đổi trả</a></li>
+                                    <li><a href="{{route('gioithieu')}}">Cửa hàng chúng tôi</a></li>
+                                    <li><a href="{{route('baohanh')}}">Chính sách bảo hành</a></li>
+                                    <li><a href="{{route('tragop')}}">Chính sách trả góp</a></li>
+                                    <li><a href="{{route('doitra')}}">Chính sách đổi trả</a></li>
 
                                 </ul>
                             </div>

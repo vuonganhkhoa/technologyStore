@@ -35,6 +35,12 @@ Route::get('/',[
     'uses'=> 'PageController@getIndex'
 ]);
 
+Route::get('lienhe',[
+    'as' => 'lien_he',
+    'uses'=> 'PageController@getLienHe'
+]);
+
+
 Route::get('sanpham',[
     'as' => 'san_pham',
     'uses'=> 'PageController@getSanPham'
@@ -78,6 +84,26 @@ Route::get('maytinhbang',[
 Route::get('phukien',[
     'as'=>'phukien',
     'uses'=> 'PageController@getPhuKien'
+]);
+
+Route::get('gioithieu',[
+    'as'=>'gioithieu',
+    'uses'=> 'PageController@getGioiThieu'
+]);
+
+Route::get('baohanh',[
+    'as'=>'baohanh',
+    'uses'=> 'PageController@getBaoHanh'
+]);
+
+Route::get('tragop',[
+    'as'=>'tragop',
+    'uses'=> 'PageController@getTraGop'
+]);
+
+Route::get('doitra',[
+    'as'=>'doitra',
+    'uses'=> 'PageController@getDoiTra'
 ]);
 
 Route::group(['prefix'=>'admin'],function(){
