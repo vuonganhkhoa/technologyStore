@@ -41,22 +41,13 @@
                                                 @endif
 
                                             <a href="{{ route('sanpham_chitiet', $sp->idSP) }}" title="Nunc facilisis" class="product-image">
-<<<<<<< HEAD
                                                 <img src="clientassets/upload/sanpham/{{$sp->urlHinhSP}}" alt="Nunc facilisis" height="250px"/>
-=======
-                                                <img src="public/clientassets/upload/sanpham/{{$sp->urlHinhSP}}" alt="Nunc facilisis" height="250px"/>
->>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                             </a>
                                             <div class="box-hover">
                                                 <ul class="add-to-links">
                                                     <li><a href="{{ route('sanpham_chitiet', $sp->idSP) }}" class="link-quickview">Xem chi tiết</a></li>
-<<<<<<< HEAD
                                                 
                                                     <li><a href="{{ route('muahang', $sp->idSP) }}" class="link-cart">Mua hàng</a></li>
-=======
-                                                    <li><a href="#" class="link-wishlist">Yêu thích</a></li>
-                                                    <li><a href="#" class="link-cart">Mua hàng</a></li>
->>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                                 </ul>
                                             </div>
                                         </div>

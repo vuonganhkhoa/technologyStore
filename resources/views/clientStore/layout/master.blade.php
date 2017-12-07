@@ -8,24 +8,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="#">
+    <base href="{{asset('')}}">
 
     <title>TechnologyStore</title>
-<<<<<<< HEAD
     <link href="clientassets/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="clientassets/assets/css/nivo-slider.css" rel="stylesheet">
     <link href="clientassets/assets/css/animate.css" rel="stylesheet">
     <link href="clientassets/assets/css/owl.carousel.css" rel="stylesheet">
     <link href="clientassets/assets/css/style.css" rel="stylesheet">
     <link href="clientassets/assets/css/responsive.css" rel="stylesheet">
-=======
-    <base href="{{asset('/')}}">
-    <link href="public/clientassets/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/clientassets/assets/css/nivo-slider.css" rel="stylesheet">
-    <link href="public/clientassets/assets/css/animate.css" rel="stylesheet">
-    <link href="public/clientassets/assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="public/clientassets/assets/css/style.css" rel="stylesheet">
-    <link href="public/clientassets/assets/css/responsive.css" rel="stylesheet">
->>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>

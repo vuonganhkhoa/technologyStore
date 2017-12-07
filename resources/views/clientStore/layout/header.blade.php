@@ -1,5 +1,4 @@
 <div class="header">
-
     <div class="topbar">
         <div class="container">
             <div class="topbar-left">
@@ -15,34 +14,6 @@
                         <a style="font-size: 14px;" href="{{ route('giohang') }}" class=""><i class="fa fa-shopping-cart" >   &nbsp;Giỏ hàng</i></a>
 
                     </li>
-
-            <div class="topbar">
-                <div class="container">
-                    <div class="topbar-left">
-                        <ul class="topbar-nav clearfix">
-                            <li><span class="phone">0906482639</span></li>
-                            <li><span class="email">technologystore96@gmail.com</span></li>
-                        </ul>
-                    </div>
-                    <div class="topbar-right">
-                        <ul class="topbar-nav clearfix">
-                            <li><a href="{{route('dashboard')}}" class="login">Đăng nhập</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="account dropdown-toggle" data-toggle="dropdown">Tài khoản</a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a title="Tài khoản cá nhân" href="account.html">Tài khoản cá nhân</a></li>
-                                    <li><a title="Sản phẩm yêu thích" href="wishlist.html">Sản phẩm yêu thích</a></li>
-                                    <li><a title="Giỏ hàng" href="{{ route('giohang') }}">Giỏ hàng</a></li>
-                                    <li><a title="Thanh toán" href="{{ route('thanhtoan') }}">Thanh toán</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="currency dropdown-toggle" data-toggle="dropdown">Dong</a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#">Đồng</a></li>
-                                    <li><a href="#">US Dollar</a></li>
-                                </ul>
-                            </li>
 
                             <!-- <li class="dropdown">
                                 <a href="#" class="language dropdown-toggle" data-toggle="dropdown"><img src="clientassets/assets/images/flag-us.png" alt=""> English</a>
@@ -60,11 +31,7 @@
                     <div class="row">
 
                         <div class="col-md-3">
-
                             <a href="./" class="logo"><img src="clientassets/assets/images/logo.png" alt=""></a>
-
-                            <a href="./" class="logo"><img src="public/clientassets/assets/images/logo.png" alt=""></a>
-
                         </div>
                         
                         <div class="col-md-9">
@@ -111,15 +78,9 @@
                             </form>
                             <div class="mini-cart">
                                 <div class="top-cart-title">
-
                                     <a href="{{route('giohang')}}" class="dropdown-toggle" data-toggle="dropdown">
                                         Giỏ hàng ({{$count}})
                                         <span class="price">{{$total}} đồng</span>
-
-                                    <a href="cart.html" class="dropdown-toggle" data-toggle="dropdown">
-                                        Giỏ hàng
-                                        <span class="price">0 đồng</span>
-
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right">
@@ -153,7 +114,7 @@
                             <div class="mega-container visible-lg visible-md">
                                 <div class="navleft-container">
                                     <div class="mega-menu-title"><h3>MENU</h3></div>
-                                    <div class="mega-menu-category">
+                                    <div class="mega-menu-category" style="display:none;">
                                         <ul class="nav">
                                             <li>
                                                 <a href="#">Điện thoại</a>
@@ -163,16 +124,8 @@
                                                             <div class="col-md-12">
                                                                 <h3>Hãng sản suất</h3>
                                                                 <ul class="nav">
-
                                                                     @foreach ($hangsanxuat as $hsx)
                                                                     <li><a href="{{route('sanpham_hsx', $hsx->idHangSX)}}">{{$hsx->TenHangSX}}</a></li>
-
-
-
-                                                                    @foreach($hangsanxuat as $hsx)
-                                                                    <li><a href="{{route('sanphamhangsx',$hsx->idHangSX)}}">{{$hsx->TenHangSX}}</a></li>
-
-
                                                                     @endforeach
                                                                 </ul>
                                                             </div>
@@ -182,21 +135,6 @@
                                                     </div>
                                                 </div>
                                             </li>
-
-
-
-                                            <li class="nosub"><a href="{{route('maytinhbang')}}">Máy tính bảng</a></li>
-                                               
-                                            <li class="nosub"><a href="{{route('sanpham_moi')}}">Sản phẩm mới</a></li>
-
-                                            <li class="nosub"><a href="{{route('sanpham_banchay')}}">Sản phẩm bán chạy</a></li>
-
-                                            <li class="nosub"><a href="{{route('sanpham_khuyenmai')}}">Sản phẩm khuyến mãi</a></li> 
-
-                                            <li class="nosub"><a href="{{route('phukien')}}">Phụ kiện khác</a></li> 
-
-
-
                                             <li class="nosub">
                                                 <a href="{{ route('maytinhbang') }}">Máy tính bảng</a>
                                                 <!-- <div class="wrap-popup" style="width: 200px;">
@@ -212,16 +150,8 @@
                                                         </div>
                                                     </div>
                                                 </div> -->
-
                                             </li>
 
-
-
-                                            <li>
-                                                <a href="#">Máy tính bảng</a>
-
-                                            </li>
-                                               
                                             <li class="nosub"><a href="{{ route('sanphammoi') }}">Sản phẩm mới</a></li>
                                             <li class="nosub"><a href="{{ route('sanphambanchay') }}">Sản phẩm bán chạy</a></li>
                                             <li class="nosub"><a href="{{ route('sanphamkhuyenmai') }}">Sản phẩm khuyến mãi</a></li> 
@@ -234,10 +164,10 @@
                         </div>
                         <div class="col-md-9">
                             <ul class="menu clearfix visible-lg visible-md">
-                                <li><a href="index.php">Trang chủ</a></li>
+                                <li><a href="{{route('trangchu')}}">Trang chủ</a></li>
                                 <li><a href="{{route('san_pham')}}">Sản phẩm</a></li>
                                 <li><a href="{{route('tin_tuc')}}">Tin tức công nghệ</a></li>
-                                <li><a href="{{route('lien_he')}}">Liên hệ</a></li>
+                                <li><a href="{{route('lienhe')}}">Liên hệ</a></li>
                             </ul>
                         </div>
                     </div>

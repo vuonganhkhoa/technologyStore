@@ -16,20 +16,22 @@ use DB, Mail;
 
 class PageController extends Controller
 {
+    
     public function getIndex(){
 
-    	$sanphamnoibat = SanPham::orderBy('SoLanXem', 'Desc')->limit(8)->get();
-    	$sanphammoi = SanPham::where('SanPhamMoi',1)->limit(8)->get();
-    	$sanphamkhuyenmai = SanPham::where('GiaKhuyenMai','<>',0)->limit(3)->get();
-    	$sanphambanchay = SanPham::orderBy('SoLanMua', 'Desc')->limit(3)->get();
-        $phukien = SanPham::where('idLoaiSP',3)->limit(3)->get();
+    	$san_pham_moi = SanPham::where('SanPhamMoi', 1)->orderBy('idSP','DESC')->limit(8)->get();
+    	$san_pham_noi_bat = SanPham::OrderBy('SoLanXem', 'DESC')->limit(8)->get();
+    	$san_pham_giam_gia = SanPham::where('GiaKhuyenMai', '<>', 0)->limit(3)->get();
+    	$san_pham_ban_chay = SanPham::OrderBy('SoLanMua', 'DESC')->limit(3)->get();
+    	$phu_kien = SanPham::where('idLoaiSP', '3')->limit(3)->get();
 
-        $tintuc = Tin::orderBy('idTin','DESC')->limit(6)->get();
+    	//dd($san_pham_ban_chay);
 
-    	return view('clientStore/page/trangchu', compact('sanphamnoibat', 'sanphammoi','sanphamkhuyenmai','sanphambanchay', 'phukien','tintuc'));
+    	$tin_tuc = Tin::orderBy('idTin','DESC')->limit(6)->get();
+
+    	return view('clientStore.page.trangchu', compact('san_pham_moi','san_pham_noi_bat', 'tin_tuc','san_pham_giam_gia', 'san_pham_ban_chay', 'phu_kien'));
     }
 
-<<<<<<< HEAD
 
 
     public function getContact(){
@@ -55,74 +57,22 @@ class PageController extends Controller
 
 
     public function getNews(){
-=======
-    public function getSanPham(){
-
-    	$sanpham = SanPham::all();
-    	return view('clientStore/page/sanpham', compact('sanpham'));
-    }
-
-    public function getTinTuc(){
->>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
 
         $tintuc = Tin::all();
-        return view('clientStore/page/tintuc', compact('tintuc'));
+        return view('clientStore.page.tintuc', compact('tintuc'));
     }
+    public function getProduct(){
 
-    public function getTinTucChiTiet($tin){
-
-        $tintuc = Tin::where('idTin',$tin)->first();
-        return view('clientStore/page/tintuc_chitiet', compact('tintuc'));
+        $sanpham = SanPham::all();
+        return view('clientStore.page.sanpham', compact('sanpham'));
     }
+    public function getNewsDetail($tin){
 
-    public function getProductDetail($id_sanpham){
-
-        $chitiet = SanPham::where('idSP', $id_sanpham)->first();
-        //$sanpham_lienquan = SanPham::where('idHangSX', $chitiet->idHangSX)->limit(8)->get(); // giới hạn 8 
-        $sanpham_lienquan = SanPham::where('idLoaiSP', $chitiet->idLoaiSP)->limit(8)->get();
-        return view('clientStore.page.sanpham_chitiet', compact('chitiet', 'sanpham_lienquan'));
-    }
-    public function getProductByProvider($id_hangSX){
-
-        $sanpham_hangSX = SanPham::where([['idHangSX', $id_hangSX],['idLoaiSP', 1]])->get();
-        $hangsanxuat = HangSanXuat::where('idHangSX', $id_hangSX)->first();
-        return view('clientStore.page.sanpham_theoHangSX', compact('sanpham_hangSX', 'hangsanxuat'));
-    }
-    public function getMayTinhBang(){
-
-        $sanpham = SanPham::where('idLoaiSP', 2)->get();
-        return view('clientStore.page.maytinhbang', compact('sanpham'));
-    }
-    public function getSanPhamMoi(){
-
-        $sanpham = SanPham::where('SanPhamMoi', 1)->get();
-        return view('clientStore.page.sanphammoi', compact('sanpham'));
-    }
-    public function getSanPhamBanChay(){
-
-        $sanpham = SanPham::orderBy('SoLanMua', 'DESC')->get();
-        return view('clientStore.page.sanphambanchay', compact('sanpham'));
-    }
-    public function getSanPhamKhuyenMai(){
-
-        $sanpham = SanPham::where('GiaKhuyenMai', '<>', 0)->get();
-        return view('clientStore.page.sanphamkhuyenmai', compact('sanpham'));
-    }
-    public function getPhuKien(){
-
-        $sanpham = SanPham::where('idLoaiSP', 3)->get();
-        return view('clientStore.page.phukien', compact('sanpham'));
+        $tintuc = Tin::where('idTin', $tin)->get();
+        return view('clientStore.page.tintuc_chitiet', compact('tintuc'));
     }
 
 
-    public function getSearch(Request $request){
-
-        $sanpham = SanPham::where('TenSP', 'like', "%".$request->key."%")->get();
-        return view('clientStore.page.danhsachtimkiem', compact('sanpham'));
-    }
-
-
-<<<<<<< HEAD
     public function getMuaHang($idSanPham){
 
         $sanpham = DB::table('sanpham')->where('idSP', $idSanPham)->first();
@@ -160,17 +110,11 @@ class PageController extends Controller
             Cart::update($id, $qty);
             echo 'true';
         }
-=======
-    public function getIntroduce(){
-
-        return view('clientStore.page.gioithieu');
->>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
     }
-    public function getWarranty(){
+    public function getCheckout(){
 
-        return view('clientStore.page.chinhsachbaohanh');
+        return view('clientStore.page.thanhtoan');
     }
-<<<<<<< HEAD
     public function postCheckout(Request $request){
 
         $khachhang = new KhachHang;
@@ -284,82 +228,13 @@ class PageController extends Controller
 
         return view('clientStore.page.chinhsachbaohanh');
     }
-=======
->>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
     public function getChinhSachTraGop(){
 
         return view('clientStore.page.chinhsachtragop');
     }
     public function getChinhSachDoiTra(){
-<<<<<<< HEAD
 
         return view('clientStore.page.chinhsachdoitra');
-=======
-
-        return view('clientStore.page.chinhsachdoitra');
-
-
-    public function getSanPham_HangSX($id_hangSX){
-
-        $sanpham_hangsx = SanPham::where([['idHangSX', $id_hangSX],['idLoaiSP',1]])->get();
-        $hangsanxuat = HangSanXuat::where('idHangSX', $id_hangSX)->first();
-        return view('clientStore/page/sanpham_theoHangSX', compact('sanpham_hangsx', 'hangsanxuat'));
-
->>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
     }
 
-    public function getSanPhamMoi(){
-
-        $sanphammoi = SanPham::where('SanPhamMoi',1)->get();
-        return view('clientStore/page/sanpham_moi', compact('sanphammoi'));
-    }
-
-    public function getSanPhamKhuyenMai(){
-
-        $sanphamkhuyenmai = SanPham::where('GiaKhuyenMai','<>',0)->get();
-        return view('clientStore/page/sanpham_khuyenmai', compact('sanphamkhuyenmai'));
-    }
-
-    public function getSanPhamBanChay(){
-
-        $sanphambanchay = SanPham::orderBy('SoLanMua', 'Desc')->get();
-        return view('clientStore/page/sanpham_banchay', compact('sanphambanchay'));
-    }
-
-    public function getMayTinhBang(){
-
-        $maytinhbang = SanPham::where('idLoaiSP', 2)->get();
-        return view('clientStore/page/maytinhbang', compact('maytinhbang'));
-    }
-
-    public function getPhuKien(){
-
-        $phukien = SanPham::where('idLoaiSP',3)->get();
-        return view('clientStore/page/phukien', compact('phukien'));
-    }
-
-    public function getGioiThieu(){
-
-        return view('clientStore/page/gioithieu');
-    }
-
-    public function getBaoHanh(){
-
-        return view('clientStore/page/baohanh');
-    }
-
-    public function getTraGop(){
-
-        return view('clientStore/page/tragop');
-    }
-
-    public function getDoiTra(){
-
-        return view('clientStore/page/doitra');
-    }
-
-    public function getLienHe(){
-
-        return view('clientStore/page/lienhe');
-    }
 }

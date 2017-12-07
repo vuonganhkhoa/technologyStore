@@ -7,41 +7,32 @@
                     <div class="owl">
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="sanpham_hsx/4" title=""><img src="public/clientassets/assets/images/brand/logo_brand4.png" alt="" width="200px" height="90px"/></a>
-
+                                <a href="sanpham_hsx/4" title=""><img src="clientassets/assets/images/brand/logo_brand4.png" alt="" width="200px" height="90px"/></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="sanpham_hsx/10" title=""><img src="public/clientassets/assets/images/brand/logo_brand3.png" alt="" width="200px" height="90px" /></a>
+                                <a href="sanpham_hsx/10" title=""><img src="clientassets/assets/images/brand/logo_brand3.png" alt="" width="200px" height="90px" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-
-                                <a href="sanpham_hsx/1" title=""><img src="public/clientassets/assets/images/brand/logo_brand5.png" alt="" width="200px" height="90px"/></a>
-
+                                <a href="sanpham_hsx/1" title=""><img src="clientassets/assets/images/brand/logo_brand5.png" alt="" width="200px" height="90px"/></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-
-                                <a href="sanpham_hsx/2" title=""><img src="public/clientassets/assets/images/brand/logo_brand2.png" alt="" width="200px" height="90px"/></a>
-
+                                <a href="sanpham_hsx/2" title=""><img src="clientassets/assets/images/brand/logo_brand2.png" alt="" width="200px" height="90px"/></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-
-                                <a href="sanpham_hsx/8" title=""><img src="public/clientassets/assets/images/brand/logo_brand1.png" alt="" width="200px" height="90px"/></a>
-
+                                <a href="sanpham_hsx/8" title=""><img src="clientassets/assets/images/brand/logo_brand1.png" alt="" width="200px" height="90px"/></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-
-                                <a href="sanpham_hsx/10" title=""><img src="public/clientassets/assets/images/brand/logo_brand3.png" alt="" width="200px" height="90px"/></a>
-
+                                <a href="sanpham_hsx/10" title=""><img src="clientassets/assets/images/brand/logo_brand3.png" alt="" width="200px" height="90px"/></a>
                             </div>
                         </div>
                     </div>
@@ -105,7 +96,6 @@
                             </div>
                             <div class="footer-content">
                                 <ul>
-
                                     <li><a href="{{ route('gioithieu') }}">Cửa hàng chúng tôi</a></li>
                                     <li><a href="{{ route('chinhsachbaohanh') }}">Chính sách bảo hành</a></li>
                                     <li><a href="{{ route('chinhsachtragop') }}">Chính sách trả góp</a></li>

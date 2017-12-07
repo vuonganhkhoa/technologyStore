@@ -6,6 +6,7 @@
 
 @section('sidebar')
 
+
     <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li>
@@ -74,6 +75,11 @@
 @endsection
 
 @section('content')
+    <style type="text/css" media="screen">
+    .hinh{
+        width: 200px !important;
+    }
+    </style>
 
         <div class="content">
                 <div class="container-fluid">
@@ -183,8 +189,9 @@
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
                                                   <label class="control-label">Hình ảnh</label>
-                                                  <img src="public/adminassets/upload/sanpham/{{$sanpham->urlHinhSP}}" width="100px" height="100px" alt="">
-                                                  <input type="file" name="hinh" class="form-control" />
+                                                  <img class="hinh" src="clientassets/upload/sanpham/{{$sanpham->urlHinhSP}}" alt="">
+                                                  <input type="hidden" name="hinh_sp" value="{{$sanpham->urlHinhSP}}">
+                                                  <input type="file" name="hinh" value="{{old('hinh_sp')}}">
                                                 </div>
                                             </div>
                                         </div>
@@ -193,7 +200,7 @@
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Ngày đăng</label>
-                                                    <input type="date" class="form-control date" placeholder="Ngày đăng"  name="ngaydang" value="{{$sanpham->NgayDang}}">
+                                                    <input type="date" class="form-control date" placeholder="Ngày đăng"  name="ngaydang" value="<?= date('Y-m-d') ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -243,5 +250,6 @@
 
                 </div>
             </div>
+
 
 @endsection

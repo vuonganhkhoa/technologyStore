@@ -19,11 +19,7 @@
 
                         <div class="row">
 	                        <div class="col-md-4">
-<<<<<<< HEAD
                                 <img src="clientassets/assets/images/blog/tragop.jpg" alt="" height="180px">  
-=======
-                                <img src="public/clientassets/assets/images/blog/tragop.jpg" alt="" height="180px">  
->>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                 <div style="margin-top: 20px;">
                                     <div class="block">
                                         <div class="block-title">
@@ -37,11 +33,7 @@
                                                 <p>0906482639</p>
                                             </div>
                                             <div class="address add"> 
-<<<<<<< HEAD
                                                 <p>180 Cao Lỗ, Q8, TP.HCM</p>
-=======
-                                                <p>80 Cao Lỗ, Q8, TP.HCM</p>
->>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                             </div>
                                         </div>
                                     </div>
