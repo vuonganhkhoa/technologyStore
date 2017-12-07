@@ -19,7 +19,7 @@
                             <a href="#"><img alt="" src="images/ads/ads-17.jpg"></a>
                         </div>
                         <div class="page-title">
-                            <h1>Sản phẩm mới</h1>
+                            <h1>Sản phẩm khuyến mãi</h1>
                         </div>
 
                         <div class="row products">
