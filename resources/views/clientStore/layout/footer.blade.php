@@ -7,32 +7,32 @@
                     <div class="owl">
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="public/clientassets/assets/images/brand/logo_brand4.png" alt="" width="200px" height="90px"/></a>
+                                <a href="sanpham_hangsx/4" title=""><img src="public/clientassets/assets/images/brand/logo_brand4.png" alt="" width="200px" height="90px"/></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="public/clientassets/assets/images/brand/logo_brand3.png" alt="" width="200px" height="90px" /></a>
+                                <a href="sanpham_hangsx/10" title=""><img src="public/clientassets/assets/images/brand/logo_brand3.png" alt="" width="200px" height="90px" /></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="public/clientassets/assets/images/brand/logo_brand5.png" alt="" width="200px" height="90px"/></a>
+                                <a href="sanpham_hangsx/1" title=""><img src="public/clientassets/assets/images/brand/logo_brand5.png" alt="" width="200px" height="90px"/></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="public/clientassets/assets/images/brand/logo_brand2.png" alt="" width="200px" height="90px"/></a>
+                                <a href="sanpham_hangsx/2" title=""><img src="public/clientassets/assets/images/brand/logo_brand2.png" alt="" width="200px" height="90px"/></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="public/clientassets/assets/images/brand/logo_brand1.png" alt="" width="200px" height="90px"/></a>
+                                <a href="sanpham_hangsx/8" title=""><img src="public/clientassets/assets/images/brand/logo_brand1.png" alt="" width="200px" height="90px"/></a>
                             </div>
                         </div>
                         <div class='item'>
                             <div class="item-innner">
-                                <a href="#" title=""><img src="public/clientassets/assets/images/brand/logo_brand3.png" alt="" width="200px" height="90px"/></a>
+                                <a href="sanpham_hangsx/10" title=""><img src="public/clientassets/assets/images/brand/logo_brand3.png" alt="" width="200px" height="90px"/></a>
                             </div>
                         </div>
                     </div>
