@@ -337,4 +337,29 @@ class PageController extends Controller
         $phukien = SanPham::where('idLoaiSP',3)->get();
         return view('clientStore/page/phukien', compact('phukien'));
     }
+
+    public function getGioiThieu(){
+
+        return view('clientStore/page/gioithieu');
+    }
+
+    public function getBaoHanh(){
+
+        return view('clientStore/page/baohanh');
+    }
+
+    public function getTraGop(){
+
+        return view('clientStore/page/tragop');
+    }
+
+    public function getDoiTra(){
+
+        return view('clientStore/page/doitra');
+    }
+
+    public function getLienHe(){
+
+        return view('clientStore/page/lienhe');
+    }
 }

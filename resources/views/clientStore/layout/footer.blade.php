@@ -105,6 +105,7 @@
                             </div>
                             <div class="footer-content">
                                 <ul>
+
                                     <li><a href="{{ route('gioithieu') }}">Cửa hàng chúng tôi</a></li>
                                     <li><a href="{{ route('chinhsachbaohanh') }}">Chính sách bảo hành</a></li>
                                     <li><a href="{{ route('chinhsachtragop') }}">Chính sách trả góp</a></li>
