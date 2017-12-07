@@ -16,6 +16,7 @@ Route::get('/',[
     'as' => 'trangchu',
     'uses'=> 'PageController@getIndex'
 ]);
+<<<<<<< HEAD
 Route::get('trangchu',[
     'as' => 'trangchu',
     'uses'=> 'PageController@getIndex'
@@ -57,11 +58,19 @@ Route::get('capnhat/{id}/{qty}',[
 Route::get('giohang',[
     'as' => 'giohang',
     'uses'=> 'PageController@getGioHang'
+=======
+
+Route::get('sanpham',[
+    'as' => 'san_pham',
+    'uses'=> 'PageController@getSanPham'
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
 ]);
+
 Route::get('thanhtoan',[
     'as' => 'thanhtoan',
     'uses'=> 'PageController@getCheckout'
 ]);
+<<<<<<< HEAD
 Route::post('thanhtoan',[
     'as' => 'thanhtoan',
     'uses'=> 'PageController@postCheckout'
@@ -73,6 +82,8 @@ Route::post('thanhtoan',[
 
 
 
+=======
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
 Route::get('sanpham_chitiet/{id_sanpham}',[
     'as' => 'sanpham_chitiet',
     'uses'=> 'PageController@getProductDetail'
@@ -87,6 +98,53 @@ Route::get('timkiem',[
 Route::get('sanpham_hsx/{id_HangSX}',[
     'as' => 'sanpham_hsx',
     'uses'=> 'PageController@getProductByProvider'
+
+
+Route::get('sanpham_hangsx/{id_HangSX}',[
+    'as'=> 'sanphamhangsx',
+    'uses'=> 'PageController@getSanPham_HangSX'
+
+]);
+Route::get('maytinhbang',[
+    'as' => 'maytinhbang',
+    'uses'=> 'PageController@getMayTinhBang'
+]);
+Route::get('sanphammoi',[
+    'as' => 'sanphammoi',
+    'uses'=> 'PageController@getSanPhamMoi'
+]);
+Route::get('sanphambanchay',[
+    'as' => 'sanphambanchay',
+    'uses'=> 'PageController@getSanPhamBanChay'
+]);
+Route::get('sanphamkhuyenmai',[
+    'as' => 'sanphamkhuyenmai',
+    'uses'=> 'PageController@getSanPhamKhuyenMai'
+]);
+Route::get('phukien',[
+    'as' => 'phukien',
+    'uses'=> 'PageController@getPhuKien'
+]);
+//---------- FOOTER (chính sách, giới thiệu) -------------
+Route::get('gioithieu',[
+    'as' => 'gioithieu',
+    'uses'=> 'PageController@getIntroduce'
+]);
+Route::get('chinhsachbaohanh',[
+    'as' => 'chinhsachbaohanh',
+    'uses'=> 'PageController@getWarranty'
+]);
+Route::get('chinhsachbaohanh',[
+    'as' => 'chinhsachbaohanh',
+    'uses'=> 'PageController@getWarranty'
+]);
+Route::get('chinhsachtragop',[
+    'as' => 'chinhsachtragop',
+    'uses'=> 'PageController@getChinhSachTraGop'
+]);
+Route::get('chinhsachdoitra',[
+    'as' => 'chinhsachdoitra',
+    'uses'=> 'PageController@getChinhSachDoiTra'
 ]);
 Route::get('maytinhbang',[
     'as' => 'maytinhbang',
@@ -137,8 +195,38 @@ Route::get('dangnhap','KhachHangController@getLogin');
 Route::post('dangnhap','KhachHangController@postLogin');
 Route::get('dangxuat','KhachHangController@getLogout');
 
+Route::get('tintuc',[
+    'as'=> 'tin_tuc',
+    'uses'=> 'PageController@getTinTuc'
+]);
 
-Route::group(['prefix'=>'admin','middleware'=>'Login'],function(){
+
+Route::get('chitiet_tintuc/{tin}',[
+    'as'=>'tintuc_chitiet',
+    'uses'=> 'PageController@getTinTucChiTiet'
+]);
+
+Route::get('sanphamoi',[
+    'as'=>'sanpham_moi',
+    'uses'=> 'PageController@getSanPhamMoi'
+]);
+
+Route::get('sanphamkhuyenmai',[
+    'as'=>'sanpham_khuyenmai',
+    'uses'=> 'PageController@getSanPhamKhuyenMai'
+]);
+
+Route::get('sanphambanchay',[
+    'as'=>'sanpham_banchay',
+    'uses'=> 'PageController@getSanPhamBanChay'
+]);
+
+Route::get('maytinhbang',[
+    'as'=>'maytinhbang',
+    'uses'=> 'PageController@getMayTinhBang'
+]);
+
+Route::group(['prefix'=>'admin'],function(){
 
     Route::get('/', [
         'as'   => 'dashboard',

@@ -15,7 +15,11 @@
                                     <div class="product-img-box">
                                         <p class="product-image">
                                             <a href="#" class="cloud-zoom" id="ma-zoom1">
+<<<<<<< HEAD
                                                 <img src="clientassets/upload/sanpham/{{$chitiet->urlHinhSP}}" alt="Fusce aliquam" title="Fusce aliquam" />
+=======
+                                                <img src="public/clientassets/upload/sanpham/{{$chitiet->urlHinhSP}}" alt="Fusce aliquam" title="Fusce aliquam" />
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                             </a>
                                         </p>
                                         <div class="more-views thumbnail-container">
@@ -74,7 +78,12 @@
                                                 </div><!-- /input-group -->
                                             </div>
                                         </div>
+<<<<<<< HEAD
                                         <a class="btn btn-danger btn-cart link-cart" href="{{ route('muahang', $chitiet->idSP) }}">Mua hàng</a>
+=======
+                                        <button type="submit" class="btn btn-danger btn-cart">Mua hàng</button>
+                                        <button type="button" class="btn btn-default btn-wishlist">Yêu thích</button>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
 
                                     </form>
                                 </div><!-- /.product-shop -->
@@ -107,12 +116,21 @@
                                                     <div class='new-icon'><span>Mới</span></div>
                                                 </div>
                                                 <a href="{{ route('sanpham_chitiet', $lienquan->idSP) }}" title="Nunc facilisis" class="product-image">
+<<<<<<< HEAD
                                                     <img src="clientassets/upload/sanpham/{{$lienquan->urlHinhSP}}" alt="Nunc facilisis" />
+=======
+                                                    <img src="public/clientassets/upload/sanpham/{{$lienquan->urlHinhSP}}" alt="Nunc facilisis" />
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
                                                         <li><a href="{{ route('sanpham_chitiet', $lienquan->idSP) }}" class="link-quickview">Xem chi tiet</a></li>
+<<<<<<< HEAD
                                                         <li><a href="{{ route('muahang', $lienquan->idSP) }}" class="link-cart">Mua hàng</a></li>
+=======
+                                                        <li><a href="#" class="link-wishlist">Yêu thích</a></li>
+                                                        <li><a href="#" class="link-cart">Mua hàng</a></li>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                                     </ul>
                                                 </div>
                                             </div>

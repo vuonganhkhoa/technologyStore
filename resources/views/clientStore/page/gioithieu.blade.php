@@ -19,7 +19,11 @@
 
                         <div class="row">
 	                        <div class="col-md-4">
+<<<<<<< HEAD
                                 <img src="clientassets/assets/images/blog/stu.jpg" alt="" height="180px">  
+=======
+                                <img src="public/clientassets/assets/images/blog/stu.jpg" alt="" height="180px">  
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                 <div style="margin-top: 20px;">
                                     <div class="block">
                                         <div class="block-title">
@@ -33,10 +37,16 @@
                                                 <p>0906482639</p>
                                             </div>
                                             <div class="address add"> 
+<<<<<<< HEAD
                                                 <p>180 Cao Lỗ, Q8, TP.HCM</p>
                                             </div>
                                         </div>
                                          
+=======
+                                                <p>80 Cao Lỗ, Q8, TP.HCM</p>
+                                            </div>
+                                        </div>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                     </div>
                                 </div>
                             </div>
@@ -51,18 +61,25 @@
                                 <p>Các sản phẩm điện thoại được bán ra tại cửa hàng là hàng chính hãng, được bảo hành 12 tháng, thời gian đổi mới tới 30 ngày và luôn nhận những ưu đãi , giá bán tốt nhất .</p>
 
 	                        	</div>
+<<<<<<< HEAD
 
                                
                         </div>
+=======
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
 	                        </div>
                         </div>
                          
                         </form>
                         <br>
                     </div>
+<<<<<<< HEAD
                     <div class="col-sm-3">
                         
                     </div>
+=======
+                    
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                 </div>
             </div>
 </div>

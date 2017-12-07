@@ -100,7 +100,7 @@
                                 </div>
                                 <div class="card-content">
 
-                                    <form method="POST" action="admin/khachhang/sua/{{$khachhang->id}}">
+                                    <form method="POST" action="admin/khachhang/sua/{{$khachhang->idKhachHang}}">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <div class="row">
 

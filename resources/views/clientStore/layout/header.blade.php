@@ -1,4 +1,5 @@
 <div class="header">
+<<<<<<< HEAD
     <div class="topbar">
         <div class="container">
             <div class="topbar-left">
@@ -15,6 +16,35 @@
 
                     </li>
 
+=======
+            <div class="topbar">
+                <div class="container">
+                    <div class="topbar-left">
+                        <ul class="topbar-nav clearfix">
+                            <li><span class="phone">0906482639</span></li>
+                            <li><span class="email">technologystore96@gmail.com</span></li>
+                        </ul>
+                    </div>
+                    <div class="topbar-right">
+                        <ul class="topbar-nav clearfix">
+                            <li><a href="{{route('dashboard')}}" class="login">Đăng nhập</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="account dropdown-toggle" data-toggle="dropdown">Tài khoản</a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a title="Tài khoản cá nhân" href="account.html">Tài khoản cá nhân</a></li>
+                                    <li><a title="Sản phẩm yêu thích" href="wishlist.html">Sản phẩm yêu thích</a></li>
+                                    <li><a title="Giỏ hàng" href="{{ route('giohang') }}">Giỏ hàng</a></li>
+                                    <li><a title="Thanh toán" href="{{ route('thanhtoan') }}">Thanh toán</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="currency dropdown-toggle" data-toggle="dropdown">Dong</a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="#">Đồng</a></li>
+                                    <li><a href="#">US Dollar</a></li>
+                                </ul>
+                            </li>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                             <!-- <li class="dropdown">
                                 <a href="#" class="language dropdown-toggle" data-toggle="dropdown"><img src="clientassets/assets/images/flag-us.png" alt=""> English</a>
                                 <ul class="dropdown-menu dropdown-menu-right">
@@ -31,7 +61,11 @@
                     <div class="row">
 
                         <div class="col-md-3">
+<<<<<<< HEAD
                             <a href="./" class="logo"><img src="clientassets/assets/images/logo.png" alt=""></a>
+=======
+                            <a href="./" class="logo"><img src="public/clientassets/assets/images/logo.png" alt=""></a>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                         </div>
                         
                         <div class="col-md-9">
@@ -78,9 +112,15 @@
                             </form>
                             <div class="mini-cart">
                                 <div class="top-cart-title">
+<<<<<<< HEAD
                                     <a href="{{route('giohang')}}" class="dropdown-toggle" data-toggle="dropdown">
                                         Giỏ hàng ({{$count}})
                                         <span class="price">{{$total}} đồng</span>
+=======
+                                    <a href="cart.html" class="dropdown-toggle" data-toggle="dropdown">
+                                        Giỏ hàng
+                                        <span class="price">0 đồng</span>
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right">
@@ -114,7 +154,7 @@
                             <div class="mega-container visible-lg visible-md">
                                 <div class="navleft-container">
                                     <div class="mega-menu-title"><h3>MENU</h3></div>
-                                    <div class="mega-menu-category" style="display:none;">
+                                    <div class="mega-menu-category">
                                         <ul class="nav">
                                             <li>
                                                 <a href="#">Điện thoại</a>
@@ -124,8 +164,16 @@
                                                             <div class="col-md-12">
                                                                 <h3>Hãng sản suất</h3>
                                                                 <ul class="nav">
+
                                                                     @foreach ($hangsanxuat as $hsx)
                                                                     <li><a href="{{route('sanpham_hsx', $hsx->idHangSX)}}">{{$hsx->TenHangSX}}</a></li>
+<<<<<<< HEAD
+=======
+
+                                                                    @foreach($hangsanxuat as $hsx)
+                                                                    <li><a href="{{route('sanphamhangsx',$hsx->idHangSX)}}">{{$hsx->TenHangSX}}</a></li>
+
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                                                     @endforeach
                                                                 </ul>
                                                             </div>
@@ -135,6 +183,21 @@
                                                     </div>
                                                 </div>
                                             </li>
+<<<<<<< HEAD
+=======
+
+                                            <li class="nosub"><a href="{{route('maytinhbang')}}">Máy tính bảng</a></li>
+                                               
+                                            <li class="nosub"><a href="{{route('sanpham_moi')}}">Sản phẩm mới</a></li>
+
+                                            <li class="nosub"><a href="{{route('sanpham_banchay')}}">Sản phẩm bán chạy</a></li>
+
+                                            <li class="nosub"><a href="{{route('sanpham_khuyenmai')}}">Sản phẩm khuyến mãi</a></li> 
+                                            
+                                            <li class="nosub"><a href="#">Phụ kiện khác</a></li> 
+
+
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                             <li class="nosub">
                                                 <a href="{{ route('maytinhbang') }}">Máy tính bảng</a>
                                                 <!-- <div class="wrap-popup" style="width: 200px;">
@@ -150,12 +213,25 @@
                                                         </div>
                                                     </div>
                                                 </div> -->
+<<<<<<< HEAD
                                             </li>
 
+=======
+
+                                            <li>
+                                                <a href="#">Máy tính bảng</a>
+
+                                            </li>
+                                               
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
                                             <li class="nosub"><a href="{{ route('sanphammoi') }}">Sản phẩm mới</a></li>
                                             <li class="nosub"><a href="{{ route('sanphambanchay') }}">Sản phẩm bán chạy</a></li>
                                             <li class="nosub"><a href="{{ route('sanphamkhuyenmai') }}">Sản phẩm khuyến mãi</a></li> 
                                             <li class="nosub"><a href="{{ route('phukien') }}">Phụ kiện khác</a></li> 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaff955e4cc142bf0bcbc0ec6b0587a2d83f7632
 
                                         </ul>
                                     </div>
@@ -164,10 +240,9 @@
                         </div>
                         <div class="col-md-9">
                             <ul class="menu clearfix visible-lg visible-md">
-                                <li><a href="{{route('trangchu')}}">Trang chủ</a></li>
+                                <li><a href="index.php">Trang chủ</a></li>
                                 <li><a href="{{route('san_pham')}}">Sản phẩm</a></li>
                                 <li><a href="{{route('tin_tuc')}}">Tin tức công nghệ</a></li>
-                                <li><a href="{{route('lienhe')}}">Liên hệ</a></li>
                             </ul>
                         </div>
                     </div>

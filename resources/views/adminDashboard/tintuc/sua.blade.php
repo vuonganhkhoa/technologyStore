@@ -78,12 +78,6 @@
 
 @section('content')
 
-    <style type="text/css" media="screen">
-    .hinh{
-        width: 200px !important;
-    }
-    </style>
-
     <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -170,7 +164,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
                                                   <label class="control-label">Hình ảnh</label>
-                                                  <img src="public/clientassets/upload/sanpham/{{$tin->urlHinhTin}}" width="100px" height="100px" alt="">
+                                                  <img src="public/adminassets/upload/tintuc/{{$tin->urlHinhTin}}" width="100px" height="100px" alt="">
                                                   <input type="file" name="hinh" class="form-control" />
                                                 </div>
                                             </div>
@@ -180,7 +174,7 @@
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Ngày đăng</label>
-                                                    <input type="date" class="form-control date" placeholder="Ngày đăng"  name="ngayDang" value="<?= date('Y-m-d') ?>">
+                                                    <input type="date" class="form-control date" placeholder="Ngày đăng"  name="ngayDang" value="{{$tin->NgayDang}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
