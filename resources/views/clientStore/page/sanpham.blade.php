@@ -18,7 +18,7 @@
                             <a href="#"><img alt="" src="images/ads/ads-17.jpg"></a>
                         </div>
                         <div class="page-title">
-                            <h1>Co {{$count}} Sản phẩm</h1>
+                            <h1>Sản phẩm</h1>
                         </div>
                         
                         <div class="row products">
@@ -77,7 +77,7 @@
                             </div>
 
                             @endforeach
-                            {{$sanpham->links()}}
+   
 
                         </div><!-- /.product -->
 
