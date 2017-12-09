@@ -18,12 +18,13 @@
                             <a href="#"><img alt="" src="images/ads/ads-17.jpg"></a>
                         </div>
                         <div class="page-title">
-                            <h1>Sản phẩm</h1>
+                            <h1>Co {{$count}} Sản phẩm</h1>
                         </div>
-
+                        
                         <div class="row products">
                             
                             @foreach ($sanpham as $sp)
+
                             <div class="col-md-3 col-sm-6">
                                 <div class='productslider-item item'>
                                     <div class="item-inner">
@@ -74,9 +75,12 @@
                                     </div>
                                 </div>
                             </div>
+
                             @endforeach
+                            {{$sanpham->links()}}
 
                         </div><!-- /.product -->
+
                     </div><!-- /.col-right -->
                 </div>
             </div>

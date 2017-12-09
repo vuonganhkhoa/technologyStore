@@ -18,8 +18,6 @@ return [
 
     'driver' => env('MAIL_DRIVER', 'smtp'),
 
-
-
     /*
     |--------------------------------------------------------------------------
     | SMTP Host Address
@@ -121,6 +119,7 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
+
     'stream' => [
        'ssl' => [
            'allow_self_signed' => true,
@@ -128,5 +127,6 @@ return [
            'verify_peer_name' => false,
        ],
     ],
+
 
 ];

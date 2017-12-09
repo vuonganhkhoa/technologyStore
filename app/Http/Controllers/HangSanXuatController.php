@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\HangSanXuat;
+use App\SanPham;
 
 class HangSanXuatController extends Controller
 {
@@ -38,12 +39,20 @@ class HangSanXuatController extends Controller
 
     public function getXoa($idHangSX){
 
-        // echo $idHangSX;
+        $so_sanpham_theo_hang = SanPham::with('HangSanXuat')->where('idHangSX',$idHangSX)->count();
 
-        $hangsanxuat = HangSanXuat::find($idHangSX);
-        $hangsanxuat->delete($idHangSX);
+        if($so_sanpham_theo_hang == 0){
 
-        return redirect('admin/hangsanxuat/danhsach')->with('thongbao', 'Xóa thành công');
+            $hangsanxuat = HangSanXuat::find($idHangSX);
+            $hangsanxuat->delete($idHangSX);
+
+            return redirect('admin/hangsanxuat/danhsach')->with('thongbao', 'Xóa thành công');
+        }else{
+
+            return redirect('admin/hangsanxuat/danhsach')->with('loi', 'Xóa không thành công. Bạn không thể xóa hãng sản xuất này.');
+        }
+
+        
     }
 
     public function getSua($idHangSX){

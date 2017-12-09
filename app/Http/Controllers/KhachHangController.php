@@ -17,12 +17,12 @@ class KhachHangController extends Controller
     
     public function getDashboard(){
 
-    	$dashboard = DB::table('KhachHang')
-    				->join('DonHang', 'DonHang.idKhachHang', '=', 'KhachHang.id') // Gộp bảng
+    	$dashboard = DB::table('khachhang')
+    				->join('donhang', 'donhang.idKhachHang', '=', 'khachhang.id') // Gộp bảng
     				->get([
-    						'KhachHang.id',
+    						'khachhang.id',
     					 	'HoTen', 
-    					 	'KhachHang.DienThoai',
+    					 	'khachhang.DienThoai',
     					    'Diachi', 
     					    'NgayGiaoHang', 
     					    'TrangThaiGiaoHang', 
@@ -79,6 +79,7 @@ class KhachHangController extends Controller
       $khachhang ->GioiTinh = $request->gioitinh;
       $khachhang ->NgayDangKy = $request->ngaydangkyKhachHang;
       $khachhang ->KichHoat = $request ->kichhoat;
+      // $khachhang ->remember_token = 0;
 
       $khachhang->save();
 

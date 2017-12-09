@@ -11,6 +11,7 @@ use App\HinhSanPham;
 use App\KhachHang;
 use App\DonHang;
 use App\ChiTietDonHang;
+use App\BinhLuan;
 use Cart;
 use DB, Mail;
 
@@ -63,13 +64,28 @@ class PageController extends Controller
     }
     public function getProduct(){
 
-        $sanpham = SanPham::all();
-        return view('clientStore.page.sanpham', compact('sanpham'));
+        //$sanpham = SanPham::all();
+        $sanpham = SanPham::paginate(8);
+        $count = SanPham::count();
+        return view('clientStore.page.sanpham', compact('sanpham', 'count'));
     }
     public function getNewsDetail($tin){
 
-        $tintuc = Tin::where('idTin', $tin)->get();
-        return view('clientStore.page.tintuc_chitiet', compact('tintuc'));
+        $tintuc = Tin::where('idTin', $tin)->first();
+        $binhluan = BinhLuan::where('idTin',$tin)->get();
+        $so_binhluan = BinhLuan::where('idTin',$tin)->count();
+        return view('clientStore.page.tintuc_chitiet', compact('tintuc', 'binhluan', 'so_binhluan'));
+    }
+    public function postNewsDetail($tin, Request $request){
+
+        $binhluan = new BinhLuan;
+        $binhluan->idTin = $tin;
+        $binhluan->idKhachHang = 1;
+        $binhluan->NgayDang = date('Y-m-d');
+        $binhluan->NoiDungBinhLuan = $request->NoiDungBinhLuan;
+        $binhluan->save();
+ 
+        return redirect()->back();
     }
 
 

@@ -81,6 +81,9 @@
                         <?php if(session('thongbao')): ?>
                             <div class="alert alert-success"><?php echo e(session('thongbao')); ?></div>
                         <?php endif; ?>
+                        <?php if(session('loi')): ?>
+                            <div class="alert alert-danger"><?php echo e(session('loi')); ?></div>
+                        <?php endif; ?>
 
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
