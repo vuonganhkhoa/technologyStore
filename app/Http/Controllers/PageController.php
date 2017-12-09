@@ -64,10 +64,8 @@ class PageController extends Controller
     }
     public function getProduct(){
 
-        //$sanpham = SanPham::all();
-        $sanpham = SanPham::paginate(8);
-        $count = SanPham::count();
-        return view('clientStore.page.sanpham', compact('sanpham', 'count'));
+        $sanpham = SanPham::all();
+        return view('clientStore.page.sanpham', compact('sanpham'));
     }
     public function getNewsDetail($tin){
 
