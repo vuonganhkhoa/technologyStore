@@ -12,8 +12,8 @@ class SanPhamController extends Controller
 {
     public function getDanhSach(){
 
-    	$sanpham = DB::table('SanPham')
-    				  ->join('HangSanXuat', 'SanPham.idHangSX', 'HangSanXuat.idHangSX')
+    	$sanpham = DB::table('sanpham')
+    				  ->join('hangsanxuat', 'sanpham.idHangSX', 'hangsanxuat.idHangSX')
     				  ->get([
 
     				  	     'idSP',

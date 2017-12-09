@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\LoaiTin;
+use App\Tin;
 
 class LoaiTinController extends Controller
 {
@@ -38,9 +39,17 @@ class LoaiTinController extends Controller
 
     public function getXoa($idLoaiTin){
 
-    	$loaitin = LoaiTin::find($idLoaiTin);
-    	$loaitin->delete();
-    	return redirect('admin/loaitin/danhsach')->with('thongbao','Xóa thành công.');
+        $so_tin_trong_loaitin = Tin::with('loaitin')->where('idLoaiTin',$idLoaiTin)->count();
+
+        if($so_tin_trong_loaitin == 0){
+            $loaitin = LoaiTin::find($idLoaiTin);
+            $loaitin->delete();
+            return redirect('admin/loaitin/danhsach')->with('thongbao','Xóa thành công.');
+        }
+        else{
+            return redirect('admin/loaitin/danhsach')->with('loi','Xóa không thành công. Bạn không thể xóa loại tin này.');
+        }
+    	
     }
 
     public function getSua($idLoaiTin){

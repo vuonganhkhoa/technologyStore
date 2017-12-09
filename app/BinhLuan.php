@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class BinhLuan extends Model
 {
     
-    protected $table   = 'BinhLuan';
+    protected $table   = 'binhluan';
     public $timestamps = false;
 
     public function KhachHang(){
 
-    	return $this->belongsTo('App\KhachHang', 'idKhachHang', 'idKhachHang');
+    	return $this->belongsTo('App\KhachHang', 'idKhachHang', 'id');
     }
     public function Tin(){
 

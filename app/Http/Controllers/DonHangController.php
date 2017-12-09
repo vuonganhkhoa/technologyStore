@@ -12,19 +12,19 @@ class DonHangController extends Controller
     
     public function getDanhSach(){
 
-    	$donhang = DB::table('DonHang')
-    				->join('KhachHang', 'KhachHang.id', '=', 'DonHang.idKhachHang') // Gộp bảng
+    	$donhang = DB::table('donhang')
+    				->join('khachhang', 'khachhang.id', '=', 'donhang.idKhachHang') // Gộp bảng
     				->get([
-    						'DonHang.idDonHang',
-    						'DonHang.NgayDatHang',
-    						'DonHang.TenNguoiNhan',
-    						'DonHang.DiaDiemGiao',
-    						'DonHang.NgayGiaoHang',
-    						'DonHang.Email',
-    						'DonHang.DienThoai',
-    						'DonHang.TrangThaiGiaoHang',
-    						'DonHang.TrangThaiThanhToan',
-    						'KhachHang.HoTen',
+    						'donhang.idDonHang',
+    						'donhang.NgayDatHang',
+    						'donhang.TenNguoiNhan',
+    						'donhang.DiaDiemGiao',
+    						'donhang.NgayGiaoHang',
+    						'donhang.Email',
+    						'donhang.DienThoai',
+    						'donhang.TrangThaiGiaoHang',
+    						'donhang.TrangThaiThanhToan',
+    						'khachhang.HoTen',
     					]);
     	return view('adminDashboard.donhang.danhsach', compact('donhang'));
     }

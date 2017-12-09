@@ -13,17 +13,17 @@ class ChiTietDonHangController extends Controller
     
     public function getDanhSach(){
 
-    	$chitiet = DB::table('ChiTietDonHang')
-    				->join('SanPham', 'SanPham.idSP', '=', 'ChiTietDonHang.idSP') // Gộp bảng
+    	$chitiet = DB::table('chitietdonhang')
+    				->join('sanpham', 'sanpham.idSP', '=', 'chitietdonhang.idSP') // Gộp bảng
     				->get([
-    						'ChiTietDonHang.idChiTietDonHang',
-    						'ChiTietDonHang.idDonHang',
-    						'ChiTietDonHang.idSP',
+    						'chitietdonhang.idChiTietDonHang',
+    						'chitietdonhang.idDonHang',
+    						'chitietdonhang.idSP',
     					 	'SoLuong', 
-    					    'ChiTietDonHang.GiaSP', 
-    					    'ChiTietDonHang.GiaKhuyenMai',
+    					    'chitietdonhang.GiaSP', 
+    					    'chitietdonhang.GiaKhuyenMai',
     					    'ThanhTien',
-    					    'SanPham.TenSP',
+    					    'sanpham.TenSP',
     					]);
     	return view('adminDashboard.chitietdonhang.danhsach', compact('chitiet'));
     }

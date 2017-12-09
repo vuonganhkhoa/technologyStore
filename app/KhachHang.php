@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class KhachHang extends Model
 {
     
-    protected $table   = 'KhachHang';
+    protected $table   = 'khachhang';
     //protected $primaryKey = 'idKhachHang';
     public $timestamps = false;
-    //private $remember_token=false;
+
 
     public function BinhLuan(){
 

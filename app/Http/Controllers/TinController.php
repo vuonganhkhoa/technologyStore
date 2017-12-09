@@ -11,13 +11,13 @@ class TinController extends Controller
 {
     public function getDanhSach(){
 
-    	$tin = DB::table('Tin')
-    			  ->join('LoaiTin', 'LoaiTin.idLoaiTin', 'Tin.idLoaiTin')
+    	$tin = DB::table('tin')
+    			  ->join('loaitin', 'loaitin.idLoaiTin', 'tin.idLoaiTin')
     			  
     			  ->get([
 
     			  		'idTin',
-    			  		'LoaiTin.idLoaiTin',
+    			  		'loaitin.idLoaiTin',
     			  		'TieuDe',
     			  		'TomTat',
     			  		'SoLanXem',

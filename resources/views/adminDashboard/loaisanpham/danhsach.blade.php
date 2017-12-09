@@ -83,6 +83,9 @@
                         @if(session('thongbao'))
                             <div class="alert alert-success">{{session('thongbao')}}</div>
                         @endif
+                        @if(session('loi'))
+                            <div class="alert alert-danger">{{session('loi')}}</div>
+                        @endif
 
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">

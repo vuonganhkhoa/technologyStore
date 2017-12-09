@@ -187,7 +187,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
                                                   <label class="control-label">Hình ảnh</label>
-                                                  <img class="hinh" src="public/clientassets/upload/sanpham/<?php echo e($sanpham->urlHinhSP); ?>" alt="">
+                                                  <img class="hinh" src="clientassets/upload/sanpham/<?php echo e($sanpham->urlHinhSP); ?>" alt="">
                                                   <input type="hidden" name="hinh_sp" value="<?php echo e($sanpham->urlHinhSP); ?>">
                                                   <input type="file" name="hinh" value="<?php echo e(old('hinh_sp')); ?>">
                                                 </div>

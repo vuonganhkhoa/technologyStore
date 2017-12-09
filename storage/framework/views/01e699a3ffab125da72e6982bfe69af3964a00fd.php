@@ -16,12 +16,13 @@
                             <a href="#"><img alt="" src="images/ads/ads-17.jpg"></a>
                         </div>
                         <div class="page-title">
-                            <h1>Sản phẩm</h1>
+                            <h1>Co <?php echo e($count); ?> Sản phẩm</h1>
                         </div>
-
+                        
                         <div class="row products">
                             
                             <?php $__currentLoopData = $sanpham; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sp): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
                             <div class="col-md-3 col-sm-6">
                                 <div class='productslider-item item'>
                                     <div class="item-inner">
@@ -72,9 +73,13 @@
                                     </div>
                                 </div>
                             </div>
+
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            <?php echo e($sanpham->links()); ?>
+
 
                         </div><!-- /.product -->
+
                     </div><!-- /.col-right -->
                 </div>
             </div>

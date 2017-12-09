@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\LoaiSanPham;
+use App\SanPham;
 
 class LoaiSanPhamController extends Controller
 {
@@ -38,9 +39,15 @@ class LoaiSanPhamController extends Controller
 
     public function getXoa($idLoaiSP){
 
-    	$loaisp = LoaiSanPham::find($idLoaiSP);
-    	$loaisp->delete();
-    	return redirect('admin/loaisanpham/danhsach')->with('thongbao','Xóa thành công.');
+        $so_sanpham_trong_loai_sanpham = SanPham::with('loaisanpham')->where('idLoaiSP',$idLoaiSP)->count();
+        if($so_sanpham_trong_loai_sanpham == 0){
+            $loaisp = LoaiSanPham::find($idLoaiSP);
+            $loaisp->delete();
+            return redirect('admin/loaisanpham/danhsach')->with('thongbao','Xóa thành công.');
+        }else{
+            return redirect('admin/loaisanpham/danhsach')->with('loi','Xóa không thành công. Bạn không thể xóa loại sản phẩm này.');
+        }
+    	
     }
 
     public function getSua($idLoaiSP){

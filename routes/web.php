@@ -40,6 +40,10 @@ Route::get('tintuc_chitiet/{tin}',[
     'as' => 'tintuc_chitiet',
     'uses'=> 'PageController@getNewsDetail'
 ]);
+Route::post('tintuc_chitiet/{tin}',[
+    'as' => 'tintuc_chitiet',
+    'uses'=> 'PageController@postNewsDetail'
+]);
 
 
 Route::get('muahang/{idSanPham}',[

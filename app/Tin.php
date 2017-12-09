@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tin extends Model
 {
     
-    protected $table   = 'Tin';
+    protected $table   = 'tin';
     protected $primaryKey = 'idTin';
     public $timestamps = false;
 

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class DonHang extends Model
 {
     
-    protected $table   = 'DonHang';
+    protected $table   = 'donhang';
      protected $primaryKey = 'idDonHang';
     public $timestamps = false;
 
@@ -17,6 +17,6 @@ class DonHang extends Model
     }
     public function KhachHang(){
 
-    	return $this->belongsTo('App\KhachHang', 'idKhachHang', 'idKhachHang');
+    	return $this->belongsTo('App\KhachHang', 'idKhachHang', 'id');
     }
 }
