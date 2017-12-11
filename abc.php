@@ -1,3 +1,3 @@
 <?php
 
-echo "ABC";
+echo "monday";
