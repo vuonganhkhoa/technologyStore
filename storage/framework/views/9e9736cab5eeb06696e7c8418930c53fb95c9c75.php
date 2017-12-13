@@ -73,7 +73,7 @@
                                                 </div>
                                                 <?php endif; ?>
                                                 <a href="<?php echo e(route('sanpham_chitiet', $sp_noibat->idSP)); ?>" title="<?php echo e($sp_noibat->TenSP); ?>" class="product-image">
-                                                    <img src="clientassets/upload/sanpham/<?php echo e($sp_noibat->urlHinhSP); ?>" alt="<?php echo e($sp_noibat->TenSP); ?>" />
+                                                    <img style="height: 220px !important"  src="clientassets/upload/sanpham/<?php echo e($sp_noibat->urlHinhSP); ?>" alt="<?php echo e($sp_noibat->TenSP); ?>" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -134,7 +134,7 @@
                                                     <?php endif; ?>
                                                 </div>
                                                 <a href="<?php echo e(route('sanpham_chitiet', $sp_moi->idSP)); ?>" title="<?php echo e($sp_moi->TenSP); ?>" class="product-image">
-                                                    <img src="clientassets/upload/sanpham/<?php echo e($sp_moi->urlHinhSP); ?>" alt="<?php echo e($sp_moi->TenSP); ?>"/>
+                                                    <img style="height: 220px !important" src="clientassets/upload/sanpham/<?php echo e($sp_moi->urlHinhSP); ?>" alt="<?php echo e($sp_moi->TenSP); ?>"/>
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -196,7 +196,7 @@
                                     <div class="products-grid">
                                         <div class="images-container">
 
-                                            <a class="product-image" title="<?php echo e($sp_banchay->TenSP); ?>" href="<?php echo e(route('sanpham_chitiet', $sp_banchay->idSP)); ?>"><img alt="<?php echo e($sp_banchay->TenSP); ?>" src="clientassets/upload/sanpham/<?php echo e($sp_banchay->urlHinhSP); ?>"></a>
+                                            <a class="product-image" title="<?php echo e($sp_banchay->TenSP); ?>" href="<?php echo e(route('sanpham_chitiet', $sp_banchay->idSP)); ?>"><img style="height: 95px !important" alt="<?php echo e($sp_banchay->TenSP); ?>" src="clientassets/upload/sanpham/<?php echo e($sp_banchay->urlHinhSP); ?>"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="<?php echo e($sp_banchay->TenSP); ?>" href="<?php echo e(route('sanpham_chitiet', $sp_banchay->idSP)); ?>"><?php echo e($sp_banchay->TenSP); ?></a></h2>
@@ -227,7 +227,7 @@
                                     <?php $__currentLoopData = $san_pham_giam_gia; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sp_giamgia): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="<?php echo e($sp_giamgia->TenSP); ?>" href="<?php echo e(route('sanpham_chitiet', $sp_giamgia->idSP)); ?>"><img alt="<?php echo e($sp_giamgia->TenSP); ?> " src="clientassets/upload/sanpham/<?php echo e($sp_giamgia->urlHinhSP); ?>"></a>
+                                            <a class="product-image" title="<?php echo e($sp_giamgia->TenSP); ?>" href="<?php echo e(route('sanpham_chitiet', $sp_giamgia->idSP)); ?>"><img style="height: 95px !important" alt="<?php echo e($sp_giamgia->TenSP); ?> " src="clientassets/upload/sanpham/<?php echo e($sp_giamgia->urlHinhSP); ?>"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="<?php echo e($sp_giamgia->TenSP); ?>" href="<?php echo e(route('sanpham_chitiet', $sp_giamgia->idSP)); ?>"><?php echo e($sp_giamgia->TenSP); ?> </a></h2>
@@ -251,7 +251,7 @@
                                     <?php $__currentLoopData = $phu_kien; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $phukien): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <div class="products-grid" style="margin-top: 5px;">
                                         <div class="images-container">
-                                            <a class="product-image" title="<?php echo e($phukien->TenSP); ?>" href="<?php echo e(route('sanpham_chitiet', $phukien->idSP)); ?>"><img alt="<?php echo e($phukien->TenSP); ?>" src="clientassets/upload/sanpham/<?php echo e($phukien->urlHinhSP); ?>"></a>
+                                            <a class="product-image" title="<?php echo e($phukien->TenSP); ?>" href="<?php echo e(route('sanpham_chitiet', $phukien->idSP)); ?>"><img style="height: 95px !important" alt="<?php echo e($phukien->TenSP); ?>" src="clientassets/upload/sanpham/<?php echo e($phukien->urlHinhSP); ?>"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="<?php echo e($phukien->TenSP); ?>" href="<?php echo e(route('sanpham_chitiet', $phukien->idSP)); ?>"><?php echo e($phukien->TenSP); ?></a></h2>

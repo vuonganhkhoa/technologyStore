@@ -44,7 +44,6 @@
                                             <div class="box-hover">
                                                 <ul class="add-to-links">
                                                     <li><a href="<?php echo e(route('sanpham_chitiet', $sp->idSP)); ?>" class="link-quickview">Xem chi tiết</a></li>
-                                                    <li><a href="#" class="link-wishlist">Yêu thích</a></li>
                                                     <li><a href="<?php echo e(route('muahang', $sp->idSP)); ?>" class="link-cart">Mua hàng</a></li>
                                                 </ul>
                                             </div>

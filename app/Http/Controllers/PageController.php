@@ -67,6 +67,7 @@ class PageController extends Controller
         $sanpham = SanPham::all();
         return view('clientStore.page.sanpham', compact('sanpham'));
     }
+
     public function getNewsDetail($tin){
 
         $tintuc = Tin::where('idTin', $tin)->first();
@@ -196,7 +197,7 @@ class PageController extends Controller
     }
     public function getProductByProvider($id_hangSX){
 
-        $sanpham_hangSX = SanPham::where([['idHangSX', $id_hangSX],['idLoaiSP', 1]])->get();
+        $sanpham_hangSX = SanPham::where('idHangSX', $id_hangSX)->get();
         $hangsanxuat = HangSanXuat::where('idHangSX', $id_hangSX)->first();
         return view('clientStore.page.sanpham_theoHangSX', compact('sanpham_hangSX', 'hangsanxuat'));
     }

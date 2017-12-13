@@ -16,7 +16,7 @@
                             <a href="#"><img alt="" src="images/ads/ads-17.jpg"></a>
                         </div>
                         <div class="page-title">
-                            <h1>Co <?php echo e($count); ?> Sản phẩm</h1>
+                            <h1>Sản phẩm</h1>
                         </div>
                         
                         <div class="row products">
@@ -40,7 +40,7 @@
                                                 <?php endif; ?>
 
                                             <a href="<?php echo e(route('sanpham_chitiet', $sp->idSP)); ?>" title="Nunc facilisis" class="product-image">
-                                                <img src="clientassets/upload/sanpham/<?php echo e($sp->urlHinhSP); ?>" alt="Nunc facilisis" height="250px"/>
+                                                <img style="height: 217px !important" src="clientassets/upload/sanpham/<?php echo e($sp->urlHinhSP); ?>" alt="Nunc facilisis"/>
                                             </a>
                                             <div class="box-hover">
                                                 <ul class="add-to-links">
@@ -75,8 +75,6 @@
                             </div>
 
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            <?php echo e($sanpham->links()); ?>
-
 
                         </div><!-- /.product -->
 
