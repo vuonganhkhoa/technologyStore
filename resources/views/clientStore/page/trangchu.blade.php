@@ -76,7 +76,7 @@
                                                 </div>
                                                 @endif
                                                 <a href="{{route('sanpham_chitiet', $sp_noibat->idSP)}}" title="{{$sp_noibat->TenSP}}" class="product-image">
-                                                    <img style="height: 220px !important"  src="clientassets/upload/sanpham/{{$sp_noibat->urlHinhSP}}" alt="{{$sp_noibat->TenSP}}" />
+                                                    <img src="clientassets/upload/sanpham/{{$sp_noibat->urlHinhSP}}" alt="{{$sp_noibat->TenSP}}" height="220px" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -137,7 +137,7 @@
                                                     @endif
                                                 </div>
                                                 <a href="{{route('sanpham_chitiet', $sp_moi->idSP)}}" title="{{$sp_moi->TenSP}}" class="product-image">
-                                                    <img style="height: 220px !important" src="clientassets/upload/sanpham/{{$sp_moi->urlHinhSP}}" alt="{{$sp_moi->TenSP}}"/>
+                                                    <img src="clientassets/upload/sanpham/{{$sp_moi->urlHinhSP}}" alt="{{$sp_moi->TenSP}}" height="220px"/>
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">
@@ -156,7 +156,7 @@
                                                     </p>
                                                     <p class="old-price price">
                                                         <span class="price-label">Giá: </span>
-                                                        <span class="old-price">{{number_format($sp_moi->GiaSP)}}</span>
+                                                        <span class="price">{{number_format($sp_moi->GiaSP)}}</span>
                                                     </p>
                                                     @else
                                                     <p class="price">
@@ -199,7 +199,7 @@
                                     <div class="products-grid">
                                         <div class="images-container">
 
-                                            <a class="product-image" title="{{$sp_banchay->TenSP}}" href="{{route('sanpham_chitiet', $sp_banchay->idSP)}}"><img style="height: 95px !important" alt="{{$sp_banchay->TenSP}}" src="clientassets/upload/sanpham/{{$sp_banchay->urlHinhSP}}"></a>
+                                            <a class="product-image" title="{{$sp_banchay->TenSP}}" href="{{route('sanpham_chitiet', $sp_banchay->idSP)}}"><img alt="{{$sp_banchay->TenSP}}" src="clientassets/upload/sanpham/{{$sp_banchay->urlHinhSP}}" height="90px"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="{{$sp_banchay->TenSP}}" href="{{route('sanpham_chitiet', $sp_banchay->idSP)}}">{{$sp_banchay->TenSP}}</a></h2>
@@ -230,7 +230,7 @@
                                     @foreach ($san_pham_giam_gia as $sp_giamgia)
                                     <div class="products-grid">
                                         <div class="images-container">
-                                            <a class="product-image" title="{{$sp_giamgia->TenSP}}" href="{{route('sanpham_chitiet', $sp_giamgia->idSP)}}"><img style="height: 95px !important" alt="{{$sp_giamgia->TenSP}} " src="clientassets/upload/sanpham/{{$sp_giamgia->urlHinhSP}}"></a>
+                                            <a class="product-image" title="{{$sp_giamgia->TenSP}}" href="{{route('sanpham_chitiet', $sp_giamgia->idSP)}}"><img alt="{{$sp_giamgia->TenSP}} " src="clientassets/upload/sanpham/{{$sp_giamgia->urlHinhSP}}" height="90px"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="{{$sp_giamgia->TenSP}}" href="{{route('sanpham_chitiet', $sp_giamgia->idSP)}}">{{$sp_giamgia->TenSP}} </a></h2>
@@ -254,7 +254,7 @@
                                     @foreach ($phu_kien as $phukien)
                                     <div class="products-grid" style="margin-top: 5px;">
                                         <div class="images-container">
-                                            <a class="product-image" title="{{$phukien->TenSP}}" href="{{route('sanpham_chitiet', $phukien->idSP)}}"><img style="height: 95px !important" alt="{{$phukien->TenSP}}" src="clientassets/upload/sanpham/{{$phukien->urlHinhSP}}"></a>
+                                            <a class="product-image" title="{{$phukien->TenSP}}" href="{{route('sanpham_chitiet', $phukien->idSP)}}"><img alt="{{$phukien->TenSP}}" src="clientassets/upload/sanpham/{{$phukien->urlHinhSP}}" height="90px"></a>
                                         </div>
                                         <div class="des-container">
                                             <h2 class="product-name"><a title="{{$phukien->TenSP}}" href="{{route('sanpham_chitiet', $phukien->idSP)}}">{{$phukien->TenSP}}</a></h2>

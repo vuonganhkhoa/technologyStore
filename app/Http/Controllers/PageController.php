@@ -67,7 +67,6 @@ class PageController extends Controller
         $sanpham = SanPham::all();
         return view('clientStore.page.sanpham', compact('sanpham'));
     }
-
     public function getNewsDetail($tin){
 
         $tintuc = Tin::where('idTin', $tin)->first();
