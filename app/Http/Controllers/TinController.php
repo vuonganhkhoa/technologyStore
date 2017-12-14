@@ -118,23 +118,20 @@ class TinController extends Controller
           $tintuc->NgayDang = $request->ngayDang;
           $tintuc->SoLanXem = $request->soLanXem;
 
-          // if ($request->hasFile('hinh')) {  //ktra có up hình or not
-          //   $file = $request->file('hinh');
-          //   $duoi = $file->getClientOriginalExtension();  //lấy đuôi file
-          //   if($duoi != 'jpg' && $duoi != 'png' && $duoi != 'jpeg'){
-          //     return redirect('admin/tintuc/them')->with('loi',' Chỉ được chọn file có phần mở rộng là jpg, jpeg, png');
-          //   }
-          //   $name = $file->getClientOriginalName();  //lấy tên hình nguyên bản
-          //   $hinh = str_random(4)."_".$name;  //tên hình khi save lại : "4 ký tự random" + "_" + name nguyên bản
-          //   while (file_exists("public/clientassets/upload/tintuc/".$hinh)) {  //ktra đã tồn tại hình có tên tương tự chưa
-          //     $hinh = str_random(4)."_".$name;    //thì random tiếp
-          //   }
-          //   $file->move("public/clientassets/upload/tintuc/",$hinh);  // move hình đã upload vào folder upload
-          //   $tintuc->urlHinhTin = $hinh;
-          // }
-          // else {
-          //   $tintuc->urlHinhTin = "";
-          // }
+          if ($request->hasFile('hinh')) {  //ktra có up hình or not
+        $file = $request->file('hinh');
+        $duoi = $file->getClientOriginalExtension();  //lấy đuôi file
+        if($duoi != 'jpg' && $duoi != 'png' && $duoi != 'jpeg'){
+          return redirect('admin/tintuc/them')->with('loi',' Chỉ được chọn file có phần mở rộng là jpg, jpeg, png');
+        }
+        $name = $file->getClientOriginalName();  //lấy tên hình nguyên bản
+        $hinh = str_random(4)."_".$name;  //tên hình khi save lại : "4 ký tự random" + "_" + name nguyên bản
+        while (file_exists("clientassets/upload/tintuc/".$hinh)) {  //ktra đã tồn tại hình có tên tương tự chưa
+          $hinh = str_random(4)."_".$name;    //thì random tiếp
+        }
+        $file->move("clientassets/upload/tintuc/",$hinh);  // move hình đã upload vào folder upload
+        $tintuc->urlHinhTin = $hinh;
+      }
 
           $tintuc->save();
           
