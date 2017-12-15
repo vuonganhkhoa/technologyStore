@@ -70,6 +70,13 @@
                             <div class="title-group3">
                             	<h3>Để lại bình luận</h3>
                             </div>
+                                        <?php if(count($errors) > 0): ?>
+                                            <div class="alert alert-danger">  <!--div đỏ  -->
+                                            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $err): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <?php echo e($err); ?><br>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                            </div>
+                                        <?php endif; ?>
                             <form action="<?php echo e(route('tintuc_chitiet', $tintuc->idTin)); ?>" method="POST">
                             <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
                             <div class="row">

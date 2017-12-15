@@ -1,0 +1,11 @@
+﻿Đề tài: Web bán điện thoại
+
+Tên database: db_technologystore
+
+Trang LOGIN:
+username: admin@gmail.com  |  vuonganhkhoa96@gmail.com
+password: 123456
+
+Thêm chức năng:
+Thi Trường Minh: kiểm tra nội dung bình luận phải trên 10 kí tự.
+Vương Anh Khoa:  Tìm kiếm sản phẩm rồi sau đó sắp xếp giá tùy theo người dùng chọn ( tăng dần hoặc giảm dần).

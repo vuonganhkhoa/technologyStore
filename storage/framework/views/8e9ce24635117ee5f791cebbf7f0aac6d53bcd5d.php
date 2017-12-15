@@ -168,7 +168,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group label-floating">
                                                   <label class="control-label">Hình ảnh</label>
-                                                  <img src="public/clientassets/upload/sanpham/<?php echo e($tin->urlHinhTin); ?>" width="100px" height="100px" alt="">
+                                                  <img src="clientassets/upload/tintuc/<?php echo e($tin->urlHinhTin); ?>" width="100px" height="100px" alt="">
                                                   <input type="file" name="hinh" class="form-control" />
                                                 </div>
                                             </div>

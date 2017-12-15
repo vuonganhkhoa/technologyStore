@@ -70,6 +70,13 @@
                             <div class="title-group3">
                             	<h3>Để lại bình luận</h3>
                             </div>
+                                        @if(count($errors) > 0)
+                                            <div class="alert alert-danger">  <!--div đỏ  -->
+                                            @foreach($errors->all() as $err)
+                                                {{$err}}<br>
+                                            @endforeach
+                                            </div>
+                                        @endif
                             <form action="{{ route('tintuc_chitiet', $tintuc->idTin) }}" method="POST">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="row">

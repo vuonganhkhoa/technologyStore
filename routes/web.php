@@ -46,6 +46,24 @@ Route::post('tintuc_chitiet/{tin}',[
 ]);
 
 
+Route::get('GiaTangDan',[
+    'as' => 'GiaTangDan',
+    'uses'=> 'PageController@getGiaTangDan'
+]);
+Route::get('GiaGiamDan',[
+    'as' => 'GiaGiamDan',
+    'uses'=> 'PageController@getGiaGiamDan'
+]);
+Route::get('SearchGiaTangDan/{key}',[
+    'as' => 'SearchGiaTangDan',
+    'uses'=> 'PageController@getSearchGiaTangDan'
+]);
+Route::get('SearchGiaGiamDan/{key}',[
+    'as' => 'SearchGiaGiamDan',
+    'uses'=> 'PageController@getSearchGiaGiamDan'
+]);
+
+
 Route::get('muahang/{idSanPham}',[
     'as' => 'muahang',
     'uses'=> 'PageController@getMuaHang'

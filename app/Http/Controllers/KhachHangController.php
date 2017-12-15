@@ -52,6 +52,8 @@ class KhachHangController extends Controller
         'matkhaunhaplaiKhachHang' => 'required|same:matkhauKhachHang',
         'diachiKhachHang'=>'required',
         'dienthoaiKhachHang'=>'required|numeric|regex:/(0)[0-9]{9,10}/'
+
+        
       ],
       [
         'tenKhachHang.required'=>'Chưa nhập tên',

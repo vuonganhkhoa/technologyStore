@@ -106,7 +106,7 @@
                                                     <div class='new-icon'><span>Mới</span></div>
                                                 </div>
                                                 <a href="<?php echo e(route('sanpham_chitiet', $lienquan->idSP)); ?>" title="Nunc facilisis" class="product-image">
-                                                    <img src="clientassets/upload/sanpham/<?php echo e($lienquan->urlHinhSP); ?>" alt="Nunc facilisis" />
+                                                    <img src="clientassets/upload/sanpham/<?php echo e($lienquan->urlHinhSP); ?>" alt="Nunc facilisis" height="200px" />
                                                 </a>
                                                 <div class="box-hover">
                                                     <ul class="add-to-links">

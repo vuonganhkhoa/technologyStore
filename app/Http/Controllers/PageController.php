@@ -64,7 +64,8 @@ class PageController extends Controller
     }
     public function getProduct(){
 
-        $sanpham = SanPham::all();
+        //$sanpham = SanPham::all();
+        $sanpham = SanPham::paginate(8);
         return view('clientStore.page.sanpham', compact('sanpham'));
     }
     public function getNewsDetail($tin){
@@ -75,6 +76,16 @@ class PageController extends Controller
         return view('clientStore.page.tintuc_chitiet', compact('tintuc', 'binhluan', 'so_binhluan'));
     }
     public function postNewsDetail($tin, Request $request){
+
+        $this->validate($request,[
+        'NoiDungBinhLuan' => 'required|min:10',
+      ],
+      [
+        
+        'NoiDungBinhLuan.required'=>'Chưa nhập chi tiết',
+        'NoiDungBinhLuan.min'=>'Bình luận phải tối thiểu 10 ký tự'
+
+      ]);
 
         $binhluan = new BinhLuan;
         $binhluan->idTin = $tin;
@@ -229,8 +240,29 @@ class PageController extends Controller
 
     public function getSearch(Request $request){
 
-        $sanpham = SanPham::where('TenSP', 'like', "%".$request->key."%")->get();
-        return view('clientStore.page.danhsachtimkiem', compact('sanpham'));
+        $sanpham = SanPham::where('TenSP', 'like', "%".$request->key."%")->paginate(8);
+        $key = $request->key;
+        return view('clientStore.page.danhsachtimkiem', compact('sanpham', 'key'));
+    }
+
+
+    public function getGiaTangDan(){
+        $sanpham = SanPham::orderBy('GiaSP', 'ASC')->paginate(8);
+        return view('clientStore.page.sanpham', compact('sanpham'));
+    }
+    public function getGiaGiamDan(){
+        $sanpham = SanPham::orderBy('GiaSP', 'DESC')->paginate(8);
+        return view('clientStore.page.sanpham', compact('sanpham'));
+    }
+    public function getSearchGiaTangDan($key){
+        $sanpham = SanPham::where('TenSP', 'like', "%".$key."%")->orderBy('GiaSP', 'ASC')->paginate(8);
+        $key = $key;
+        return view('clientStore.page.danhsachtimkiem', compact('sanpham', 'key'));
+    }
+    public function getSearchGiaGiamDan($key){
+        $sanpham = SanPham::where('TenSP', 'like', "%".$key."%")->orderBy('GiaSP', 'DESC')->paginate(8);
+        $key = $key;
+        return view('clientStore.page.danhsachtimkiem', compact('sanpham', 'key'));
     }
 
 

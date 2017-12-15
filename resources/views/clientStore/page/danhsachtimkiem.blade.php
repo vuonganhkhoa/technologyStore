@@ -19,6 +19,11 @@
                         </div>
                         <div class="page-title">
                             <h1>Sản phẩm</h1>
+                            <h4>Tìm kiếm theo <span style="color:red;">'{{ $key }}'</span></h4>
+                        </div>
+
+                        <div>
+                            <p><b>Tìm kiếm theo: </b><a href="{{ route('SearchGiaTangDan', $key) }}">Giá tăng dần</a> | <a href="{{ route('SearchGiaGiamDan', $key) }}">Giá giảm dần</a></p>
                         </div>
 
                         <div class="row products">
@@ -76,6 +81,8 @@
                             @endforeach
 
                         </div><!-- /.product -->
+
+                        {{ $sanpham->links() }}
                     </div><!-- /.col-right -->
                 </div>
             </div>

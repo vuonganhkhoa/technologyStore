@@ -17,6 +17,11 @@
                         </div>
                         <div class="page-title">
                             <h1>Sản phẩm</h1>
+                            <h4>Tìm kiếm theo <span style="color:red;">'<?php echo e($key); ?>'</span></h4>
+                        </div>
+
+                        <div>
+                            <p><b>Tìm kiếm theo: </b><a href="<?php echo e(route('SearchGiaTangDan', $key)); ?>">Giá tăng dần</a> | <a href="<?php echo e(route('SearchGiaGiamDan', $key)); ?>">Giá giảm dần</a></p>
                         </div>
 
                         <div class="row products">
@@ -74,6 +79,9 @@
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                         </div><!-- /.product -->
+
+                        <?php echo e($sanpham->links()); ?>
+
                     </div><!-- /.col-right -->
                 </div>
             </div>

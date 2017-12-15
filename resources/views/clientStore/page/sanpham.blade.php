@@ -20,6 +20,10 @@
                         <div class="page-title">
                             <h1>Sản phẩm</h1>
                         </div>
+
+                        <div>
+                            <p><b>Tìm kiếm theo: </b><a href="{{ route('GiaTangDan') }}">Giá tăng dần</a> | <a href="{{ route('GiaGiamDan') }}">Giá giảm dần</a></p>
+                        </div>
                         
                         <div class="row products">
                             
@@ -80,6 +84,8 @@
                             
 
                         </div><!-- /.product -->
+
+                        {{ $sanpham->links() }}
 
                     </div><!-- /.col-right -->
                 </div>
