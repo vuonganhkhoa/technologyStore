@@ -82,7 +82,7 @@
 
                         </div><!-- /.product -->
 
-                        {{ $sanpham->links() }}
+                        {{ $sanpham->appends(request()->input())->links() }}
                     </div><!-- /.col-right -->
                 </div>
             </div>
